@@ -11,7 +11,7 @@ item_gloves
 [COVERAGE:100]
 [LAYER_SIZE:20]
 [LAYER_PERMIT:15]
-[MATERIAL_SIZE:2]
+[MATERIAL_SIZE:6]{:2   Revision: balanced the required materials to make them.}
 [SCALED]
 [BARRED]
 [METAL]

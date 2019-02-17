@@ -4,318 +4,531 @@ item_weapon
 
 [ITEM_WEAPON:ITEM_WEAPON_WHIP]
 [NAME:whip:whips]
-[SIZE:100]
+[SIZE:50]{:100  Revision: balanced weapon sizes.}
 [SKILL:WHIP]
 [TWO_HANDED:27500]
 [MINIMUM_SIZE:22500]
-[MATERIAL_SIZE:1]
-[ATTACK:BLUNT:1:10:lash:lashes:NO_SUB:5000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+[MATERIAL_SIZE:3]{:1  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:20000:50:lash:lashes:NO_SUB:1500] 1200 standard
+	[ATTACK_PREPARE_AND_RECOVER:5:7]
 	[ATTACK_FLAG_BAD_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_AXE_BATTLE]
-[NAME:battle axe:battle axes]
-[SIZE:800]
+[NAME:battle-axe:battle-axes]{:battle axe:battle axes}
+[SIZE:100]{:800  Revision: balanced weapon sizes.}
 [SKILL:AXE]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:42500]
-[MATERIAL_SIZE:4]
+[MATERIAL_SIZE:3]{:4  Revision: balanced the required materials to make them.}
 
 The format is ATTACK:EDGE/BLUNT:contact area:penetration size:verb2nd:verb3rd:noun:velocity multiplier
 Penetration size currently only matters for edged attacks.
 
-[ATTACK:EDGE:40000:6000:hack:hacks:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:40000:6000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:300:450:hack:hacks:NO_SUB:1230]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:EDGE:300:225:closely hack:closely hacks:NO_SUB:750]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+[ATTACK:EDGE:600:1170:cleave:cleaves:NO_SUB:1230]
+	[ATTACK_PREPARE_AND_RECOVER:6:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:50:200:hook:hooks:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:50:400:bash:bashes:reverse:1230]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:3000:400:slap:slaps:flat:1230]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:100:400:shove:shoves:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:4:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_HAMMER_WAR]
-[NAME:war hammer:war hammers]
-[SIZE:400]
+[NAME:warhammer:warhammers]{:war hammer:war hammers}
+[SIZE:180]{:400  Revision: balanced weapon sizes.}
 [SKILL:HAMMER]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
-[MATERIAL_SIZE:3]
-[ATTACK:BLUNT:10:200:bash:bashes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:6]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:26:1:bash:bashes:NO_SUB:1910] 1270 standard
+	[ATTACK_PREPARE_AND_RECOVER:9:5]
+[ATTACK:EDGE:8:100:strike:strikes:fluke:1910] 
+	[ATTACK_PREPARE_AND_RECOVER:9:5]
+[ATTACK:EDGE:8:375:thrust:thrusts:spike:500] sturdy
+	[ATTACK_PREPARE_AND_RECOVER:8:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:375:200:hook:hooks:NO_SUB:500] 
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:50:1000:strike:strikes:pommel:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT]
-[NAME:short sword:short swords]
-[SIZE:300]
+[NAME:shortsword:shortswords]{:short sword:short swords}
+[SIZE:120]{:300  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
 [CAN_STONE]
-[MATERIAL_SIZE:3]
-[ATTACK:EDGE:20000:4000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:50:2000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:20000:4000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:6]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:2000:2000:slash:slashes:NO_SUB:600]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:EDGE:20000:100:cleanly slash:cleanly slashes:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:7:2]
+[ATTACK:EDGE:1000:120:cut:cuts:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:4:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:15:200:jab:jabs:NO_SUB:50] vel/10
+	[ATTACK_PREPARE_AND_RECOVER:4:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:15:670:stab:stabs:NO_SUB:100] pen/3
+	[ATTACK_PREPARE_AND_RECOVER:8:4]
+[ATTACK:EDGE:15:2000:thrust:thrusts:NO_SUB:100]
+	[ATTACK_PREPARE_AND_RECOVER:8:8]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:20000:4000:slap:slaps:flat:600]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
 [ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_SPEAR]
 [NAME:spear:spears]
-[SIZE:400]
+[SIZE:225]{:400  Revision: balanced weapon sizes.}
 [SKILL:SPEAR]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:5000] amphibian men, etc., need variants
-[MATERIAL_SIZE:3]
-[ATTACK:EDGE:20:10000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[CAN_STONE]{+  Revision: allowed more obsidian weapons.}
+[MATERIAL_SIZE:2]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:12:520:jab:jabs:NO_SUB:80] vel/5  sharp point
+	[ATTACK_PREPARE_AND_RECOVER:3:2]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:12:1300:stab:stabs:NO_SUB:160] pen/1
+	[ATTACK_PREPARE_AND_RECOVER:6:2]
+[ATTACK:EDGE:870:60:cut:cuts:NO_SUB:50]
+	[ATTACK_PREPARE_AND_RECOVER:5:3]
+[ATTACK:BLUNT:20:200:hook:hooks:wing:500]
+	[ATTACK_PREPARE_AND_RECOVER:4:2]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:8000:6000:bash:bashes:shaft:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:5]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_MACE]
 [NAME:mace:maces]
-[SIZE:800]
+[SIZE:120]{:800  Revision: balanced weapon sizes.}
 [SKILL:MACE]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
-[MATERIAL_SIZE:3]
-[ATTACK:BLUNT:20:200:bash:bashes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:1]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:50:200:bash:bashes:NO_SUB:1820] 1210 standard
+	[ATTACK_PREPARE_AND_RECOVER:7:4] quick
+[ATTACK:BLUNT:100:200:club:clubs:NO_SUB:2730]
+	[ATTACK_PREPARE_AND_RECOVER:6:6] quick, wild
 
 [ITEM_WEAPON:ITEM_WEAPON_CROSSBOW]
 [NAME:crossbow:crossbows]
-[SIZE:400]
+[SIZE:150]{:400  Revision: balanced weapon sizes.}
 [SKILL:HAMMER]
 [RANGED:CROSSBOW:BOLT]
-[SHOOT_FORCE:1000]
-[SHOOT_MAXVEL:200]  This is just to make sure a near-weightless object doesn't go faster than the string could possibly go.
+[SHOOT_FORCE:560]{:1000  Revision: balanced with the ammunition.}
+[SHOOT_MAXVEL:1500]{:200}
 [TWO_HANDED:0]
 [MINIMUM_SIZE:15000]
-[MATERIAL_SIZE:3]
-[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:9]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:200:4000:bash:bashes:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
 
 [ITEM_WEAPON:ITEM_WEAPON_PICK]
 [NAME:pick:picks]
-[SIZE:500]
+[SIZE:230]{:500  Revision: balanced weapon sizes.}
 [SKILL:MINING]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:42500]
-[MATERIAL_SIZE:4]
-[ATTACK:EDGE:100:4000:strike:strikes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:3]{:4  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:12:500:strike:strikes:NO_SUB:1350]
+	[ATTACK_PREPARE_AND_RECOVER:8:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:120:1:bash:bashes:reverse:1350]
+	[ATTACK_PREPARE_AND_RECOVER:8:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:500:200:hook:hooks:NO_SUB:850]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:1000:500:shove:shoves:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:4:5]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_BOW]
 [NAME:bow:bows]
-[SIZE:300]
+[SIZE:140]{:300  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [RANGED:BOW:ARROW]
-[SHOOT_FORCE:1000]
-[SHOOT_MAXVEL:200]
+[SHOOT_FORCE:980]{:1000  Revision: balance bows better.}
+[SHOOT_MAXVEL:630]{:200}
 [TWO_HANDED:0]
 [MINIMUM_SIZE:15000]
-[MATERIAL_SIZE:3]
-[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:1]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:2500:4000:bash:bashes:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:4]
 
 [ITEM_WEAPON:ITEM_WEAPON_BLOWGUN]
 [NAME:blowgun:blowguns]
-[SIZE:150]
+[SIZE:50]{:150  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [RANGED:BLOWGUN:BLOWDART]
 [SHOOT_FORCE:100]
 [SHOOT_MAXVEL:1000] I suppose you could blow harder and harder, but the force prevents it from getting out of hand.
 [TWO_HANDED:0]
 [MINIMUM_SIZE:5000]
-[MATERIAL_SIZE:2]
-[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:3]{:2  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:2500:4000:bash:bashes:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
 
 [ITEM_WEAPON:ITEM_WEAPON_PIKE]
 [NAME:pike:pikes]
-[SIZE:800]
+[SIZE:400]{:800  Revision: balanced weapon sizes.}
 [SKILL:PIKE]
 [TWO_HANDED:77500]
 [MINIMUM_SIZE:62500]
-[MATERIAL_SIZE:4]
-[ATTACK:EDGE:20:12000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[CAN_STONE]{+  Revision: allowed more obsidian weapons.}
+[MATERIAL_SIZE:3]{:4  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:16:260:jab:jabs:NO_SUB:70] vel/5  sharp point
+	[ATTACK_PREPARE_AND_RECOVER:1:1]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:80:20:prick:pricks:NO_SUB:40] area/2  sharp point
+	[ATTACK_PREPARE_AND_RECOVER:1:1]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:16:2625:stab:stabs:NO_SUB:140] pen/2
+	[ATTACK_PREPARE_AND_RECOVER:2:1]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:800:80:cut:cuts:NO_SUB:50]
+	[ATTACK_PREPARE_AND_RECOVER:1:3]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:16:5250:thrust:thrusts:NO_SUB:140]
+	[ATTACK_PREPARE_AND_RECOVER:2:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:16000:6000:bash:bashes:shaft:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:9]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_HALBERD]
 [NAME:halberd:halberds]
-[SIZE:1200]
+[SIZE:530]{:1200  Revision: balanced weapon sizes.}
 [SKILL:AXE]
 [TWO_HANDED:77500]
 [MINIMUM_SIZE:62500]
-[MATERIAL_SIZE:5]
-[ATTACK:EDGE:20000:8000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:50:2000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:20000:6000:bash:bashes:shaft:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:12]{:5  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:7000:100:slash:slashes:NO_SUB:800] 250 + 550
+	[ATTACK_PREPARE_AND_RECOVER:3:2] 4:4 jab-like
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:EDGE:700:250:hack:hacks:NO_SUB:1150] 600 + 550
+	[ATTACK_PREPARE_AND_RECOVER:5:2] 6:3 quick
+[ATTACK:EDGE:16:500:jab:jabs:NO_SUB:100] 500/5  sharp point
+	[ATTACK_PREPARE_AND_RECOVER:3:2]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:16:1000:stab:stabs:NO_SUB:200] pen/1
+	[ATTACK_PREPARE_AND_RECOVER:6:2] 7:4
+[ATTACK:EDGE:1500:80:cut:cuts:NO_SUB:50]
+	[ATTACK_PREPARE_AND_RECOVER:5:3] 7:3 fixed recover
+[ATTACK:EDGE:5:300:strike:strikes:spike:1940] x1.25
+	[ATTACK_PREPARE_AND_RECOVER:8:4] 10:6  special
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:8000:6000:bash:bashes:shaft:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:7]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_2H]
-[NAME:two-handed sword:two-handed swords]
-[SIZE:900]
+[NAME:greatsword:greatswords]{:two-handed sword:two-handed swords}
+[SIZE:470]{:900  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [TWO_HANDED:77500]
 [MINIMUM_SIZE:62500]
-[MATERIAL_SIZE:5]
-[ATTACK:EDGE:100000:8000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:50:4000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100000:8000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:9]{:5  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:4800:4800:slash:slashes:NO_SUB:790]
+	[ATTACK_PREPARE_AND_RECOVER:7:2] zweihander windmill
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:50000:100:cleanly slash:cleanly slashes:NO_SUB:400]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+[ATTACK:EDGE:2400:180:cut:cuts:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:3:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:17:450:jab:jabs:NO_SUB:40] vel/10
+	[ATTACK_PREPARE_AND_RECOVER:3:4]
+[ATTACK:EDGE:17:1510:stab:stabs:NO_SUB:80] pen/3
+	[ATTACK_PREPARE_AND_RECOVER:8:3]
+[ATTACK:EDGE:17:4530:thrust:thrusts:NO_SUB:400] dagger-like special
+	[ATTACK_PREPARE_AND_RECOVER:7:8]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:48000:8000:slap:slaps:flat:790]
+	[ATTACK_PREPARE_AND_RECOVER:7:2] zweihander windmill
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1150]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_LONG]
-[NAME:long sword:long swords]
-[SIZE:700]
+[NAME:longsword:longswords]{:long sword:long swords}
+[SIZE:250]{:700  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [TWO_HANDED:57500]
 [MINIMUM_SIZE:52500]
-[MATERIAL_SIZE:4]
-[ATTACK:EDGE:60000:6000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:50:3000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:60000:6000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:9]{:4  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:4000:4000:slash:slashes:NO_SUB:750]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:EDGE:40000:100:cleanly slash:cleanly slashes:NO_SUB:380]
+	[ATTACK_PREPARE_AND_RECOVER:7:2]
+[ATTACK:EDGE:2000:150:cut:cuts:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:3:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:15:400:jab:jabs:NO_SUB:40] vel/10
+	[ATTACK_PREPARE_AND_RECOVER:3:4]
+[ATTACK:EDGE:15:1340:stab:stabs:NO_SUB:80] pen/3
+	[ATTACK_PREPARE_AND_RECOVER:8:3]
+[ATTACK:EDGE:15:4000:thrust:thrusts:NO_SUB:400] dagger-like special
+	[ATTACK_PREPARE_AND_RECOVER:7:8]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:40000:6000:slap:slaps:flat:750]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:BLUNT:12:1000:bash:grabs the blade and bashes:guard:1880] x1.5
+	[ATTACK_PREPARE_AND_RECOVER:9:5]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_MAUL]
 [NAME:maul:mauls]
-[SIZE:1300]
+[SIZE:680]{:1300  Revision: balanced weapon sizes.}
 [SKILL:HAMMER]
 [TWO_HANDED:77500]
 [MINIMUM_SIZE:62500]
-[MATERIAL_SIZE:5]
-[ATTACK:BLUNT:100:6000:bash:bashes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[CAN_STONE]{+  Revision: allowed more obsidian weapons.}
+[MATERIAL_SIZE:3]{:5  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:100:1:bash:bashes:NO_SUB:4100] 2730 mod; 1820 standard
+	[ATTACK_PREPARE_AND_RECOVER:5:8] heavy hit, wild
 
 [ITEM_WEAPON:ITEM_WEAPON_AXE_GREAT]
-[NAME:great axe:great axes]
-[SIZE:1300]
+[NAME:greataxe:greataxes]{:great axe:great axes}
+[SIZE:260]{:1300  Revision: balanced weapon sizes.}
 [SKILL:AXE]
 [TWO_HANDED:77500]
 [MINIMUM_SIZE:62500]
-[MATERIAL_SIZE:5]
-[ATTACK:EDGE:60000:8000:hack:hacks:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:60000:8000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:6]{:5  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:220:800:hack:hacks:NO_SUB:1460] 
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:EDGE:650:2435:cleave:cleaves:NO_SUB:1460] 
+	[ATTACK_PREPARE_AND_RECOVER:6:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:100:200:hook:hooks:NO_SUB:920]
+	[ATTACK_PREPARE_AND_RECOVER:6:2]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:300:400:bash:bashes:reverse:1460] 
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:6500:8000:slap:slaps:flat:1460]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:100:1000:shove:shoves:NO_SUB:500] 
+	[ATTACK_PREPARE_AND_RECOVER:3:4]
 
 [ITEM_WEAPON:ITEM_WEAPON_DAGGER_LARGE]
 [NAME:dagger:daggers]
 [ADJECTIVE:large]
-[SIZE:200]
+[SIZE:75]{:200  Revision: balanced weapon sizes.}
 [SKILL:DAGGER]
 [TWO_HANDED:27500]
 [MINIMUM_SIZE:5000]
-[MATERIAL_SIZE:1]
-[ATTACK:EDGE:1000:800:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:5:1000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:3]{:1  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:5000:50:cut:cuts:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:5:4]
+[ATTACK:EDGE:5:1000:stab:stabs:NO_SUB:200] pen/1
+	[ATTACK_PREPARE_AND_RECOVER:9:4]
+[ATTACK:EDGE:5:1000:thrust:thrusts:NO_SUB:400] x2 special
+	[ATTACK_PREPARE_AND_RECOVER:10:5] heavy
 [ATTACK:BLUNT:20:600:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_SCOURGE]
 [NAME:scourge:scourges]
-[SIZE:300]
+[SIZE:35]{:300  Revision: balanced weapon sizes.}
 [SKILL:WHIP]
 [TWO_HANDED:27500]
 [MINIMUM_SIZE:22500]
-[MATERIAL_SIZE:2]
-[ATTACK:EDGE:10:50:lash:lashes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[CAN_STONE]{+  Revision: allowed more obsidian weapons.}
+[MATERIAL_SIZE:3]{:2  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:20:50:bash:bashes:NO_SUB:3050] 1350 standard
+	[ATTACK_PREPARE_AND_RECOVER:6:6] wild
 	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:60:50:bludgeon:bludgeons:NO_SUB:1020]
+	[ATTACK_PREPARE_AND_RECOVER:6:3] wild
 
 [ITEM_WEAPON:ITEM_WEAPON_FLAIL]
 [NAME:flail:flails]
-[SIZE:500]
+[SIZE:110]{:500  Revision: balanced weapon sizes.}
 [SKILL:MACE]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:42500]
-[MATERIAL_SIZE:4]
-[ATTACK:BLUNT:200:4000:bash:bashes:NO_SUB:2500]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:9]{:4  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:5:25:bash:spins the ball and bashes:NO_SUB:2240] 1490 standard
+	[ATTACK_PREPARE_AND_RECOVER:4:7]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:250:10:loosely bash:loosely bashes:NO_SUB:230] 150 standard
+	[ATTACK_PREPARE_AND_RECOVER:4:7]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:3000:1:wind round:winds round:chain:230]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:EDGE:20:1:bludgeon:bludgeons:NO_SUB:750]
+	[ATTACK_PREPARE_AND_RECOVER:4:4]
+[ATTACK:EDGE:20:1:bash:spins the ball and bashes:multiple spikes:2240]
+	[ATTACK_PREPARE_AND_RECOVER:4:7]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
 
 [ITEM_WEAPON:ITEM_WEAPON_MORNINGSTAR]
 [NAME:morningstar:morningstars]
-[SIZE:500]
+[SIZE:230]{:500  Revision: balanced weapon sizes.}
 [SKILL:MACE]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
-[MATERIAL_SIZE:3]
-[ATTACK:EDGE:10:500:bash:bashes:NO_SUB:2000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:50:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:6]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:10:50:bash:bashes:NO_SUB:2010] 1340 standard
+	[ATTACK_PREPARE_AND_RECOVER:9:5]
+[ATTACK:EDGE:60:1:club:clubs:NO_SUB:3020]
+	[ATTACK_PREPARE_AND_RECOVER:7:7] wild
+[ATTACK:EDGE:8:300:thrust:thrusts:top spike:500] sturdy
+	[ATTACK_PREPARE_AND_RECOVER:8:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:10:1000:strike:strikes:pommel:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_SCIMITAR]
 [NAME:scimitar:scimitars]
-[SIZE:300]
+[SIZE:120]{:300  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
-[MATERIAL_SIZE:3]
-[ATTACK:EDGE:20000:4000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:EDGE:50:2000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:20000:4000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:50:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:6]{:3  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:330:100:slash:slashes:NO_SUB:670]
+	[ATTACK_PREPARE_AND_RECOVER:7:2]
+[ATTACK:EDGE:100:100:slice:slices:NO_SUB:1170]
+	[ATTACK_PREPARE_AND_RECOVER:9:2]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:33000:100:cleanly slash:cleanly slashes:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:5:2]
+[ATTACK:EDGE:1650:200:cut:cuts:NO_SUB:250]
+	[ATTACK_PREPARE_AND_RECOVER:4:3]
+[ATTACK:EDGE:17:465:thrust:thrusts:NO_SUB:60] vel/5
+	[ATTACK_PREPARE_AND_RECOVER:8:4] hooked blade
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:100:3300:slap:slaps:flat:670]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 
 [ITEM_WEAPON:ITEM_WEAPON_AXE_TRAINING]
 [NAME:training axe:training axes]
-[SIZE:800]
+[SIZE:100]{:800  Revision: balanced weapon sizes.}
 [SKILL:AXE]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:42500]
-[MATERIAL_SIZE:4]
-[ATTACK:BLUNT:30000:6000:hack:hacks:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:30000:6000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+[MATERIAL_SIZE:3]{:4  Revision: balanced the required materials to make them.}
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:500:1:hack:hacks:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:5000:1:slap:slaps:flat:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+[ATTACK:BLUNT:300:200:hook:hooks:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
+[ATTACK:BLUNT:50:1:shove:shoves:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:4:4]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
 [TRAINING]
 
 [ITEM_WEAPON:ITEM_WEAPON_SWORD_SHORT_TRAINING]
 [NAME:training sword:training swords]
-[SIZE:300]
+[SIZE:120]{:300  Revision: balanced weapon sizes.}
 [SKILL:SWORD]
 [TWO_HANDED:37500]
 [MINIMUM_SIZE:32500]
 [MATERIAL_SIZE:3]
-[ATTACK:BLUNT:20000:4000:slash:slashes:NO_SUB:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:50:2000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:20000:4000:slap:slaps:flat:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:100:1000:strike:strikes:pommel:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:2000:1:slash:slashes:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:BLUNT:30:1:stab:stabs:NO_SUB:500]
+	[ATTACK_PREPARE_AND_RECOVER:8:4]
+[ATTACK:BLUNT:20000:1:slap:slaps:flat:500]
+	[ATTACK_PREPARE_AND_RECOVER:7:3]
+[ATTACK:BLUNT:100:1:strike:strikes:pommel:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
 [TRAINING]
 
 [ITEM_WEAPON:ITEM_WEAPON_SPEAR_TRAINING]
 [NAME:training spear:training spears]
-[SIZE:400]
+[SIZE:250]{:400  Revision: balanced weapon sizes.}
 [SKILL:SPEAR]
 [TWO_HANDED:47500]
 [MINIMUM_SIZE:42500]
 [MATERIAL_SIZE:3]
-[ATTACK:BLUNT:200:10000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-[ATTACK:BLUNT:10000:6000:bash:bashes:shaft:1250]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:BLUNT:50:1:shove:shoves:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:6:3]
+[ATTACK:BLUNT:8000:1:bash:bashes:shaft:1320]
+	[ATTACK_PREPARE_AND_RECOVER:7:4]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]
 [TRAINING]
+
+[ITEM_WEAPON:ITEM_WEAPON_CLUB]{+  Revision: add a new wooden club for elves, because it makes more sense than wooden swords.}
+[NAME:club:clubs]
+[ADJECTIVE:enchanted]
+[SIZE:1900]
+[SKILL:MACE]
+[TWO_HANDED:37500]
+[MINIMUM_SIZE:32500]
+[MATERIAL_SIZE:12]
+[ATTACK:BLUNT:10:200:bash:bashes:NO_SUB:2000]
+	[ATTACK_PREPARE_AND_RECOVER:4:3]
+
+[ITEM_WEAPON:ITEM_WEAPON_GREATCLUB]{+  Revision: add a new wooden club for elves, because it makes more sense than wooden swords.}
+[NAME:greatclub:greatclubs]
+[ADJECTIVE:enchanted]
+[SIZE:2000]
+[SKILL:MACE]
+[TWO_HANDED:77500]
+[MINIMUM_SIZE:57500]
+[MATERIAL_SIZE:18]
+[ATTACK:EDGE:3:200:strike:strikes:NO_SUB:2800]
+	[ATTACK_PREPARE_AND_RECOVER:9:5]
+
+[ITEM_WEAPON:ITEM_WEAPON_TRIDENT]{+  Revision: add a new strong spear for elves.}
+[NAME:trident:tridents]
+[ADJECTIVE:enchanted]
+[SIZE:450]
+[SKILL:SPEAR]
+[TWO_HANDED:47500]
+[MINIMUM_SIZE:5000]
+[MATERIAL_SIZE:18]
+[ATTACK:EDGE:3:600:jab:jabs:NO_SUB:700]
+	[ATTACK_PREPARE_AND_RECOVER:2:2]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:EDGE:3:3000:stab:stabs:NO_SUB:1400]
+	[ATTACK_PREPARE_AND_RECOVER:4:1]
+[ATTACK:EDGE:3:4250:thrust:thrusts:NO_SUB:1400]
+	[ATTACK_PREPARE_AND_RECOVER:4:6]
+	[ATTACK_FLAG_BAD_MULTIATTACK]
+[ATTACK:BLUNT:12000:6000:bash:bashes:shaft:1250]
+	[ATTACK_PREPARE_AND_RECOVER:6:7]
+	[ATTACK_FLAG_INDEPENDENT_MULTIATTACK]

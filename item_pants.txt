@@ -10,7 +10,7 @@ item_pants
 [COVERAGE:100]
 [LAYER_SIZE:15]
 [LAYER_PERMIT:30]
-[MATERIAL_SIZE:4]
+[MATERIAL_SIZE:6]{:4    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
@@ -22,10 +22,10 @@ item_pants
 [LBSTEP:MAX]
 [SHAPED]
 [LAYER:ARMOR]
-[COVERAGE:100]
+[COVERAGE:50]{:100     Revision: tassets are smaller than greaves.}
 [LAYER_SIZE:15]
 [LAYER_PERMIT:30]
-[MATERIAL_SIZE:6]
+[MATERIAL_SIZE:9]{:6   Revision: balanced the required materials to make them.}
 [METAL]
 [BARRED]
 [HARD]
@@ -41,7 +41,7 @@ item_pants
 [COVERAGE:100]
 [LAYER_SIZE:15]
 [LAYER_PERMIT:30]
-[MATERIAL_SIZE:5]
+[MATERIAL_SIZE:18]{:5   Revision: balanced the required materials to make them.}
 [SCALED]
 [METAL]
 [LEATHER]
@@ -50,19 +50,21 @@ item_pants
 
 [ITEM_PANTS:ITEM_PANTS_LOINCLOTH]
 [NAME:loincloth:loincloths]
+[LBSTEP:1]{+            Revision: compensate for the (new) hips.}
 [LAYER:UNDER]
 [COVERAGE:50]
 [LAYER_SIZE:10]
 [LAYER_PERMIT:30]
-[MATERIAL_SIZE:1]
+[MATERIAL_SIZE:2]{:1    Revision: balanced the required materials to make them.}
 [SOFT]
-[LEATHER]
+{LEATHER                Revision: this was silly.}
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
 [ITEM_PANTS:ITEM_PANTS_THONG]
-[NAME:breechcloth:breechcloths]
+[NAME:thong:thongs]
+[LBSTEP:1]{+            Revision: compensate for the (new) hips.}
 [LAYER:UNDER]
-[COVERAGE:25]
+[COVERAGE:15]{:25       Revision: reduce the armor coverage.}
 [LAYER_SIZE:10]
 [LAYER_PERMIT:30]
 [MATERIAL_SIZE:1]
@@ -71,40 +73,39 @@ item_pants
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
 [ITEM_PANTS:ITEM_PANTS_SKIRT]
-[PREPLURAL:pairs of]
-[NAME:pantaloons:pantaloons]
-[LBSTEP:MAX]
+[NAME:skirt:skirts]
+[LBSTEP:2]{:1           Revision: compensate for the (new) hips.}
 [LAYER:OVER]
 [COVERAGE:100]
-[LAYER_SIZE:15]
-[LAYER_PERMIT:30]
-[MATERIAL_SIZE:4]
+[LAYER_SIZE:10]
+[LAYER_PERMIT:100]
+[MATERIAL_SIZE:4]{:2    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
 [ITEM_PANTS:ITEM_PANTS_SKIRT_SHORT]
-[PREPLURAL:pairs of]
-[NAME:trousers:trousers]
-[LBSTEP:MAX]
+[NAME:skirt:skirts]
+[ADJECTIVE:short]
+[LBSTEP:1]{+            Revision: compensate for the (new) hips.}
 [LAYER:OVER]
-[COVERAGE:80]
-[LAYER_SIZE:15]
-[LAYER_PERMIT:30]
-[MATERIAL_SIZE:3]
+[COVERAGE:100]
+[LAYER_SIZE:10]
+[LAYER_PERMIT:100]
+[MATERIAL_SIZE:3]{:2    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
-[ADJECTIVE:short]
 
 [ITEM_PANTS:ITEM_PANTS_SKIRT_LONG]
-[NAME:legwraps:legwraps]
+[NAME:skirt:skirts]
+[ADJECTIVE:long]
 [LBSTEP:MAX]
 [LAYER:OVER]
-[COVERAGE:40]
-[LAYER_SIZE:15]
-[LAYER_PERMIT:30]
-[MATERIAL_SIZE:2]
+[COVERAGE:100]
+[LAYER_SIZE:10]
+[LAYER_PERMIT:100]
+[MATERIAL_SIZE:5]{:2    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
@@ -112,12 +113,12 @@ item_pants
 [ITEM_PANTS:ITEM_PANTS_BRAIES]
 [PREPLURAL:pairs of]
 [NAME:braies:braies]
-[LBSTEP:1]
+[LBSTEP:2]{:1           Revision: compensate for the (new) hips.}
 [LAYER:UNDER]
 [COVERAGE:100]
 [LAYER_SIZE:10]
 [LAYER_PERMIT:30]
-[MATERIAL_SIZE:3]
+[MATERIAL_SIZE:6]{:3    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]

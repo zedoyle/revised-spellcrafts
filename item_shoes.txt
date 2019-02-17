@@ -9,6 +9,7 @@ item_shoes
 [LAYER_SIZE:20]
 [LAYER_PERMIT:15]
 [MATERIAL_SIZE:1]
+[SHAPED]{+             Revision: shoes aren't usually worn over other shoes.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
@@ -22,7 +23,8 @@ item_shoes
 [COVERAGE:100]
 [LAYER_SIZE:25]
 [LAYER_PERMIT:15]
-[MATERIAL_SIZE:2]
+[MATERIAL_SIZE:9]{:2   Revision: balanced the required materials to make them.}
+[SHAPED]{+             Revision: boots aren't usually worn over other boots.}
 [METAL]
 [LEATHER]
 [HARD]
@@ -35,6 +37,7 @@ item_shoes
 [COVERAGE:100]
 [LAYER_SIZE:25]
 [LAYER_PERMIT:15]
+[MATERIAL_SIZE:2]{:1   Revision: balanced the required materials to make them.}
 [MATERIAL_SIZE:1]
 [METAL]
 [LEATHER]
@@ -43,10 +46,11 @@ item_shoes
 [ITEM_SHOES:ITEM_SHOES_SANDAL]
 [NAME:sandal:sandals]
 [LAYER:OVER]
-[COVERAGE:100]
+[COVERAGE:70]{:100     Revision: balance coverage.}
 [LAYER_SIZE:25]
 [LAYER_PERMIT:15]
 [MATERIAL_SIZE:1]
+[SHAPED]{+             Revision: sandals aren't usually worn over sandals or boots.}
 [SOFT]
 [LEATHER]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
@@ -58,9 +62,9 @@ item_shoes
 [COVERAGE:100]
 [LAYER_SIZE:10]
 [LAYER_PERMIT:15]
-[MATERIAL_SIZE:3]
+[MATERIAL_SIZE:6]{:3  Revision: balanced the required materials to make them.}
 [SOFT]
-[LEATHER]
+{LEATHER              Revision: chausses are metal, not leather.}
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
 
 [ITEM_SHOES:ITEM_SHOES_SOCKS]
