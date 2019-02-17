@@ -12,6 +12,7 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[CASTE_NAME:damselfly:damselflies:damselfly]
 	[CREATURE_TILE:249][COLOR:3:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:ANY_POOL]
 	[VERMIN_GROUNDER][FREQUENCY:100]
 	[VERMIN_NOTRAP]
@@ -19,6 +20,7 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[SMALL_REMAINS][NO_WINTER]
 	[PREFSTRING:coloration]
 	[FLIER]
+	[CREATURE_CLASS:EDIBLE_FLYING_BUG]{+  Revision: let them be hunted as vermin.}
 	[DIURNAL]
 	[NO_SLEEP]
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph, NO DATA
@@ -30,7 +32,7 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -49,8 +51,10 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, meat-eating insect with a long, colorful body and large, filmy wings.  She lives near water, preying on insects in flight.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, meat-eating insect with a long, colorful body and large, filmy wings.  He lives near water, preying on insects in flight.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:AQUAMARINE:1]
@@ -65,8 +69,10 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:damselfly man:damselfly men:damselfly man]
+		[DESCRIPTION:A small, naked, unsettling man with large, wide-set compound eyes on a wide head, four arms, and a long, gaunt, colorful body.  He has veined, filmy wings on his back and holds them folded and upright when he's not flying.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:damselfly woman:damselfly women:damselfly woman]
+		[DESCRIPTION:A small, naked, unsettling woman with large, wide-set compound eyes on a wide head, four arms, and a long, gaunt, colorful body.  She has veined, filmy wings on her back and holds them folded and upright when she's not flying.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -85,15 +91,21 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 
 [CREATURE:GIANT_DAMSELFLY]
 	[COPY_TAGS_FROM:DAMSELFLY]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, colorful, meat-eating insect with a long, gaunt body, compound eyes, and large, filmy wings.  She preys on insects and birds in flight, snatching them from the air.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, colorful, meat-eating insect with a long, gaunt body, compound eyes, and large, filmy wings.  He preys on insects and birds in flight, snatching them from the air.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant damselfly:giant damselflies:giant damselfly]
 	[CASTE_NAME:giant damselfly:giant damselflies:giant damselfly]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A large monster in the shape of a damselfly.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:5]
@@ -102,8 +114,11 @@ Damselflies were sponsored by the generous contributions of the Bay 12 community
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:coloration]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
@@ -120,6 +135,7 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 	[NAME:moth:moths:moth]
 	[CASTE_NAME:moth:moths:moth]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_GROUNDER][FREQUENCY:100]
 	[VERMIN_NOTRAP]
@@ -138,7 +154,7 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -156,15 +172,17 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 	[BODY_SIZE:0:0:1]
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
+		[DESCRIPTION:A tiny, fluttering insect with feathery antenna and large, patterned wings.  She flies toward flames in the night.]{+}
 		[FEMALE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, fluttering insect with feathery antenna and large, patterned wings.  He flies toward flames in the night.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
-			[TL_COLOR_MODIFIER:BROWN:1]
+			[TL_COLOR_MODIFIER:SILVER:1:WHITE:1:RUSSET:1:DARK_PEACH:1:PEARL:1:CREAM:1:IVORY:1:BROWN:1:LIGHT_BROWN:1:SEPIA:1:CINNAMON:1:PEACH:1]{:BROWN:1}
 				[TLCM_NOUN:chitin:SINGULAR]
 		[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
-			[TL_COLOR_MODIFIER:BLACK:1]
+			[TL_COLOR_MODIFIER:BLACK:1:BLUE:1:CERULEAN:1:EMERALD:1:MAROON:1]{:BLACK:1}
 				[TLCM_NOUN:eyes:PLURAL]
 
 [CREATURE:MOTH_MAN]
@@ -173,8 +191,10 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:moth man:moth men:moth man]
+		[DESCRIPTION:A small, naked, unsettling man with feathery antennae, four arms, and large, wide-set compound eyes on the sides of his long head.  His feathery body is covered in dust-like scales.  The broad, patterned wings on his back are larger than he is.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:moth woman:moth women:moth woman]
+		[DESCRIPTION:A small, naked, unsettling woman with feathery antennae, four arms, and large, wide-set compound eyes on the sides of her long head.  Her feathery body is covered in dust-like scales.  The broad, patterned wings on her back are larger than she is.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -193,15 +213,21 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_MOTH]
 	[COPY_TAGS_FROM:MOTH]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, fluttering insect with a long body covered in dust-like scales and patterned wings much broader than her thin body.  She has feathery antennae and large, wide-set compound eyes on the sides of her long head.  She flies toward flames in the night.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, fluttering insect with a long body covered in dust-like scales and patterned wings much broader than his thin body.  He has feathery antennae and large, wide-set compound eyes on the sides of his long head.  He lies toward flames in the night.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant moth:giant moths:giant moth]
 	[CASTE_NAME:giant moth:giant moths:giant moth]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A large monster in the form of a moth.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -210,6 +236,7 @@ Moths were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:coloration]
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph
@@ -227,6 +254,7 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 	[CASTE_NAME:grasshopper:grasshoppers:grasshopper]
 	[CREATURE_TILE:250][COLOR:2:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[FREQUENCY:100]
 	[UBIQUITOUS]
@@ -243,7 +271,7 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -262,8 +290,10 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, jumping insect that feeds on crops and blends into foliage.  She leaps on powerful legs before flying back to earth.  She rubs a hind leg against the edge of her wing to make noise.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, jumping insect that feeds on crops and blends into foliage.  He leaps on powerful legs before flying back to earth.  He rubs a hind leg against the edge of his wing to make noise.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:GREEN:1]
@@ -278,8 +308,10 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:grasshopper man:grasshopper men:grasshopper man]
+		[DESCRIPTION:A small, naked, unsettling man with four arms, long antennae, and large compound eyes.  His long face slumps forward and ends with large mandibles.  He leaps on powerful legs and flies with the patterned wings on his back.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:grasshopper woman:grasshopper women:grasshopper woman]
+		[DESCRIPTION:A small, naked, unsettling woman with four arms, long antennae, and large compound eyes.  Her long face slumps forward ends with large mandibles.  She leaps on powerful legs and flies with the patterned wings on her back.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -297,15 +329,21 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 
 [CREATURE:GIANT_GRASSHOPPER]
 	[COPY_TAGS_FROM:GRASSHOPPER]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, jumping, crop-feeding insect with long antennae and large compound eyes.  She makes noise by rubbing a hind leg against the edge of her long, patterned wings.  She leaps great distances on powerful legs before flying to earth.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, jumping, crop-feeding insect with long antennae and large compound eyes.  He makes noise by rubbing a hind leg against the edge of his long, patterned wings.  He leaps great distances on powerful legs before flying to earth.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant grasshopper:giant grasshoppers:giant grasshopper]
 	[CASTE_NAME:giant grasshopper:giant grasshoppers:giant grasshopper]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A huge creature in the shape of a grasshopper.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -314,9 +352,11 @@ Grasshoppers were sponsored by the generous contributions of the Bay 12 communit
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:chirping]
 	[PREFSTRING:great leaps]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 
@@ -326,13 +366,15 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 
 [CREATURE:BARK_SCORPION]
 	[DESCRIPTION:A tiny yellow bug.  It has pincers and a stinging tail which can prove fatal.]
-	[NAME:bark scorpion:bark scorpions:bark scorpion]
-	[CASTE_NAME:bark scorpion:bark scorpions:bark scorpion]
+	[NAME:scorpion:scorpions:scorpion]{:bark scorpion:bark scorpions:bark scorpion}
+	[CASTE_NAME:scorpion:scorpions:scorpion]{:bark scorpion:bark scorpions:bark scorpion}
+	[GENERAL_CHILD_NAME:scorpling:scorplings:scorpling]{+}
 	[CREATURE_TILE:249][COLOR:6:0:1]
 	[CARNIVORE]
 	[PET_EXOTIC]
 	[PARALYZEIMMUNE]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:ANY_DESERT]
 	[BIOME:GRASSLAND_TROPICAL]
 	[BIOME:SAVANNA_TROPICAL]
@@ -354,20 +396,20 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 	[NOT_BUTCHERABLE]
 	[NOPAIN][EXTRAVISION][NOSTUN][NOFEAR]
 	[NOBONES]
-	[BODY:SPIDER:2EYES:HEART:GUTS:BRAIN:TAIL:TAIL_STINGER:UPPERBODY_PINCERS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY:SPIDER:2EYES:HEART:GUTS:BRAIN:TAIL:TAIL_STINGER:UPPERBODY_PINCERS:MOUTH]{:UPPERBODY_PINCERS  Revision: added a mouth.}
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[USE_MATERIAL_TEMPLATE:VENOM:CREATURE_EXTRACT_TEMPLATE]
-		[STATE_NAME:ALL_SOLID:frozen bark scorpion venom]
-		[STATE_ADJ:ALL_SOLID:frozen bark scorpion venom]
-		[STATE_NAME:LIQUID:bark scorpion venom]
-		[STATE_ADJ:LIQUID:bark scorpion venom]
-		[STATE_NAME:GAS:boiling bark scorpion venom]
-		[STATE_ADJ:GAS:boiling bark scorpion venom]
+		[STATE_NAME:ALL_SOLID:frozen scorpion venom]{:frozen bark scorpion venom}
+		[STATE_ADJ:ALL_SOLID:frozen scorpion venom]{:frozen bark scorpion venom}
+		[STATE_NAME:LIQUID:scorpion venom]{:bark scorpion venom}
+		[STATE_ADJ:LIQUID:scorpion venom]{:bark scorpion venom}
+		[STATE_NAME:GAS:boiling scorpion venom]{:boiling bark scorpion venom}
+		[STATE_ADJ:GAS:boiling scorpion venom]{:boiling bark scorpion venom}
 		[PREFIX:NONE]
 		[ENTERS_BLOOD]
 		[SYNDROME]
-			[SYN_NAME:bark scorpion sting]
+			[SYN_NAME:scorpion sting]{:bark scorpion sting}
 			[SYN_AFFECTED_CLASS:GENERAL_POISON]
 			[SYN_IMMUNE_CREATURE:BARK_SCORPION:ALL]
 			[SYN_INJECTED]
@@ -393,8 +435,10 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 	[APPLY_CREATURE_VARIATION:PINCER_ATTACK]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny arachnid with pincers and eight legs.  Her stinging tail can prove fatal.  She scuttles around rotting wood.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny arachnid with pincers and eight legs.  His stinging tail can prove fatal.  He scuttles around rotting wood.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:TAN:1]
@@ -405,12 +449,30 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 
 [CREATURE:BARK_SCORPION_MAN]
 	[COPY_TAGS_FROM:BARK_SCORPION]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_NAME]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:scorpion man]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_ADJ]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:scorpion man]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:SYN_NAME]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:scorpion man]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:SYN_IMMUNE_CREATURE]
+		[CVCT_TARGET:BARK_SCORPION]
+		[CVCT_REPLACEMENT:BARK_SCORPION_MAN]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:bark scorpion man:bark scorpion men:bark scorpion man]
+		[CASTE_NAME:scorpion man:scorpion men:scorpion man]{:bark scorpion man:bark scorpion men:bark scorpion man}
+		[DESCRIPTION:A small, naked, unsettling man with wide-set eyes on a broad head above large chelicerae.  He has six arms in addition to the large pincers on his shoulders.  His stinging tail can prove fatal.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:bark scorpion woman:bark scorpion women:bark scorpion woman]
+		[CASTE_NAME:scorpion woman:scorpion women:scorpion woman]{:bark scorpion woman:bark scorpion women:bark scorpion woman}
+		[DESCRIPTION:A small, naked, unsettling woman with wide-set eyes on a broad head above large chelicerae.  She has six arms in addition to the large pincers on her shoulders.  Her stinging tail can prove fatal.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:TAIL_STING_VENOM_ATTACK]
 	[APPLY_CREATURE_VARIATION:PINCER_ATTACK]
@@ -419,7 +481,7 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:bark scorpion man:bark scorpion men:bark scorpion man]
+	[NAME:scorpion man:scorpion men:scorpion man]{:bark scorpion man:bark scorpion men:bark scorpion man}
 	[DESCRIPTION:A person with the head, pincers and tail of a bark scorpion.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -429,16 +491,38 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 
 [CREATURE:GIANT_BARK_SCORPION]
 	[COPY_TAGS_FROM:BARK_SCORPION]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_NAME]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:giant scorpion]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_ADJ]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:giant scorpion]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:SYN_NAME]
+		[CVCT_TARGET:scorpion]
+		[CVCT_REPLACEMENT:giant scorpion]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:SYN_IMMUNE_CREATURE]
+		[CVCT_TARGET:BARK_SCORPION]
+		[CVCT_REPLACEMENT:GIANT_BARK_SCORPION]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, scuttling arachnid with huge, clacking pincers, eight legs, and wide-set eyes on a broad head.  The sting of her segmented tail can prove fatal.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, scuttling arachnid with huge, clacking pincers, eight legs, and wide-set eyes on a broad head.  The sting of his segmented tail can prove fatal.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:6667367]
 	[GO_TO_START]
-	[NAME:giant bark scorpion:giant bark scorpions:giant bark scorpion]
-	[CASTE_NAME:giant bark scorpion:giant bark scorpions:giant bark scorpion]
+	[NAME:giant scorpion:giant scorpions:giant scorpion]{:giant bark scorpion:giant bark scorpions:giant bark scorpion}
+	[CASTE_NAME:giant scorpion:giant scorpions:giant scorpion]{:giant bark scorpion:giant bark scorpions:giant bark scorpion}
 	[DESCRIPTION:A huge monster in the form of a bark scorpion.]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
 	[CREATURE_TILE:'S']
@@ -446,9 +530,12 @@ Bark scorpions were sponsored by the generous contributions of the Bay 12 commun
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:10]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:pincers]
 	[PREFSTRING:stinging tail]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
@@ -461,6 +548,7 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:mantis:mantises:mantis]
 	[CREATURE_TILE:250][COLOR:2:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_GROUNDER][FREQUENCY:100]
 	[VERMIN_NOTRAP]
@@ -469,6 +557,7 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[PREFSTRING:predatory nature]
 	[PREFSTRING:grasping legs]
 	[FLIER]
+	[CREATURE_CLASS:EDIBLE_FLYING_BUG]{+  Revision: let them be hunted as vermin.}
 	[ALL_ACTIVE]
 	[NO_SLEEP]
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph, NO DATA
@@ -480,7 +569,7 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT_4LEGS_2ARMS:2EYES:HEART:GUTS:BRAIN:MOUTH:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -501,8 +590,10 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:ARM_LOWER_SNATCH_ATTACK]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, predatory insect.  She ensares prey with her long, distinctive forelimbs.  She keeps them folded, making her look like she's praying.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, predatory insect.  He ensares prey with his long, distinctive forelimbs.  He keeps them folded, making him look like he's praying.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:GREEN:1]
@@ -517,8 +608,10 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:mantis man:mantis men:mantis man]
+		[DESCRIPTION:A small, naked, unsettling man with large, wide-set eyes on a triangular head.  He scuttles on four spindly legs and flies with veined wings on his back.  He has unusually long, spined arms that he keeps folded, so that he looks like he's praying.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:mantis woman:mantis women:mantis woman]
+		[DESCRIPTION:A small, naked, unsettling woman with large, wide-set eyes on a triangular head.  She scuttles on four spindly legs and flies with veined wings on her back.  She has unusually long, spined arms that she keeps folded, so that she looks like she's praying.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]
 	[APPLY_CREATURE_VARIATION:ARM_LOWER_SNATCH_ATTACK]
@@ -538,15 +631,21 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_MANTIS]
 	[COPY_TAGS_FROM:MANTIS]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, predatory, cannibalistic insect that walks on four spindly legs and flies on veined wings.  She keeps her long, spined arms folded before lashing out to catch her prey.  She's admired for her strange beauty and feared for her savage nature.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, predatory, cannibalistic insect that walks on four spindly legs and flies on veined wings.  He keeps his long, spined arms folded before lashing out to catch his prey.  He's admired for his strange beauty and feared for his savage nature.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant mantis:giant mantises:giant mantis]
 	[CASTE_NAME:giant mantis:giant mantises:giant mantis]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A large monster in the shape of a mantis.]
 	[POPULATION_NUMBER:25:50]
 	[CLUSTER_NUMBER:1:1]
@@ -555,9 +654,12 @@ Mantises were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:predatory nature]
 	[PREFSTRING:grasping legs]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
@@ -573,6 +675,7 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:tick:ticks:tick]
 	[CREATURE_TILE:250][COLOR:0:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_SOIL][FREQUENCY:100]
 	[UBIQUITOUS]
@@ -591,7 +694,7 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:SPIDER:2EYES:HEART:GUTS:BRAIN:MOUTH]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -611,8 +714,10 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 	[MAXAGE:2:2]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny insect that feeds on blood.  She clings to animals and people alike, her body bloating as she feeds.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny insect that feeds on blood.  He clings to animals and people alike, his body bloating as he feeds.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:RED:1]
@@ -627,8 +732,10 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:tick man:tick men:tick man]
+		[DESCRIPTION:A small, naked, unsettling man that feeds on flesh and blood.  He has a long, carapaced head, beady eyes, six segmented arms, and sharp mandibles.  His body bloats as he feeds.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:tick woman:tick women:tick woman]
+		[DESCRIPTION:A small, naked, unsettling woman that feeds on flesh and blood.  She has a long, carapaced head, beady eyes, six segmented arms, and sharp mandibles.  Her body bloats as she feeds.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -647,16 +754,22 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_TICK]
 	[COPY_TAGS_FROM:TICK]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, blood-sucking insect that latches and feeds with sharp mandibles, draining her victims before consuming them as her body bloats from her meal.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, blood-sucking insect that latches and feeds with sharp mandibles, draining his victims before consuming them as his body bloats from his meal.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant tick:giant ticks:giant tick]
 	[CASTE_NAME:giant tick:giant ticks:giant tick]
 	[DESCRIPTION:A large monster taking the shape of a tick.]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
 	[CREATURE_TILE:'T']
@@ -664,6 +777,8 @@ Ticks were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:ability to expand]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
@@ -681,6 +796,7 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:louse:lice:louse]
 	[CREATURE_TILE:250][COLOR:6:0:0]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_SOIL][FREQUENCY:100]
 	[UBIQUITOUS]
@@ -699,7 +815,7 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -718,8 +834,10 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, wingless, parasitic insect that lives among hair and feathers, feeding on skin and blood.  Her pale body darkens as it fills with stolen blood.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, wingless, parasitic insect that lives among hair and feathers, feeding on skin and blood.  His pale body darkens as it fills with stolen blood.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:BEIGE:1]
@@ -734,8 +852,10 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:louse man:louse men:louse man]
+		[DESCRIPTION:A small, naked, unsettling man with four segmented arms and a pale body that bloats as he feeds on flesh and blood.  He has a beady eyes and short antennae on a narrow, carapaced head.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:louse woman:louse women:louse woman]
+		[DESCRIPTION:A small, naked, unsettling woman with four segmented arms and a pale body that bloats as she feeds on flesh and blood.  She has beady eyes and short antennae on a narrow, carapaced head.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -754,15 +874,21 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_LOUSE]
 	[COPY_TAGS_FROM:LOUSE]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, wingless, parasitic insect that clings to her victims, carving into them and biting deeply.  Her pale body bloats as she feeds on flesh and blood.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, wingless, parasitic insect that clings to his victims, carving into them and biting deeply.  His pale body bloats as he feeds on flesh and blood.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant louse:giant lice:giant louse]
 	[CASTE_NAME:giant louse:giant lice:giant louse]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A huge monster in the shape of a louse.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -771,8 +897,10 @@ Lice were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:ability to infest]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
@@ -787,6 +915,7 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:thrips:thrips:thrips]
 	[CREATURE_TILE:250][COLOR:6:0:0]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_SOIL][FREQUENCY:100]
 	[UBIQUITOUS]
@@ -807,7 +936,7 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -826,8 +955,10 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny pest insect with a slender body and fringed wings.  She feeds on both crops and other bugs.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny pest insect with a slender body and fringed wings.  He feeds on both crops and other bugs.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:BROWN:1]
@@ -842,8 +973,10 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:thrips man:thrips men:thrips man]
+		[DESCRIPTION:A small, naked, unsettling man with an oblong, segmented body, four thin, segmented arms, and large compound eyes on the sides of his long, antennaed head.  He flies with the veined, filmy wings on his back, watching for his next meal of blood and flesh.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:thrips woman:thrips women:thrips woman]
+		[DESCRIPTION:A small, naked, unsettling woman with an oblong, segmented body, four thin, segmented arms, and large compound eyes on the sides of her long, antennaed head.  She flies with the veined, filmy wings on her back, watching for her next meal of blood and flesh.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -862,15 +995,21 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_THRIPS]
 	[COPY_TAGS_FROM:THRIPS]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, oblong, segmented insect with large, veined wings, long antennae, and a great appetite; she's feared for feeding on both crop and farmer.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, oblong, segmented insect with large, veined wings, long antennae, and a great appetite; he's feared for feeding on both crop and farmer.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant thrips:giant thrips:giant thrips]
 	[CASTE_NAME:giant thrips:giant thrips:giant thrips]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A huge monster in the form of a thrips.]
 	[POPULATION_NUMBER:15:30]
 	[CLUSTER_NUMBER:5:10]
@@ -879,8 +1018,10 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:prolific breeding]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
@@ -889,7 +1030,7 @@ Thrips were sponsored by the generous contributions of the Bay 12 community.
 Slugs were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:SLUG]
-	[DESCRIPTION:A tiny land mollusk.  It can be found under rotten logs and in gardens.]
+	[DESCRIPTION:A tiny land mollusk with long eyestalks and a mantle on its mucus-covered back.  It lives under rotten logs and in gardens.]{:A tiny land mollusk.  It can be found under rotten logs and in gardens.}
 	[NAME:slug:slugs:slug]
 	[CASTE_NAME:slug:slugs:slug]
 	[CREATURE_TILE:'~'][COLOR:6:0:0]
@@ -897,12 +1038,13 @@ Slugs were sponsored by the generous contributions of the Bay 12 community.
 	[VERMIN_SOIL][FREQUENCY:100][VERMIN_HATEABLE]
 	[SMALL_REMAINS][VERMIN_NOTRAP][NOBONES]
 	[NATURAL][PET]
+	[VISION_ARC:0:360]{+  Revision: eyestalks have good vision.}
 	[BENIGN][NOT_BUTCHERABLE]
 	[BIOME:NOT_FREEZING]
 	[POPULATION_NUMBER:250:500]
 	[PREFSTRING:slime trails]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:HEART:GUTS:BRAIN:MOUTH:2EYESTALKS]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[REMOVE_MATERIAL:HAIR]
 		[REMOVE_MATERIAL:BONE]
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
@@ -942,7 +1084,7 @@ Slugs were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_START]
 	[NAME:slug man:slug men:slug man]
 	[CASTE_NAME:slug man:slug men:slug man]
-	[DESCRIPTION:A great slug with the torso of a man.  It pulls itself across the ground with its hands for greater speed.]
+	[DESCRIPTION:A small, bloated mollusk-like humanoid, naked and sexless with long eyestalks on a rounded head.  Legless, its long, mucus-covered body writhes along the ground to move.]{:A great slug with the torso of a man.  It pulls itself across the ground with its hands for greater speed.}
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
 	[MAXAGE:60:80]
@@ -951,6 +1093,7 @@ Slugs were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_SLUG]
 	[COPY_TAGS_FROM:SLUG]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
@@ -960,16 +1103,19 @@ Slugs were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_START]
 	[NAME:giant slug:giant slugs:giant slug]
 	[CASTE_NAME:giant slug:giant slugs:giant slug]
-	[DESCRIPTION:A huge monster in the form of a slug.]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
+	[DESCRIPTION:A large, mucus-coated mollusk with eyes at the end of long stalks and a long mantle on its back.]{:A huge monster in the form of a slug.}
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
 	[CREATURE_TILE:'S']
 	[COLOR:6:0:0]
 	[PET_EXOTIC]
 	[PETVALUE:500]
-	[MOUNT_EXOTIC]
+	{MOUNT_EXOTIC   Revision: they're too slow for use as mounts.}
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:slime trails]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 
@@ -981,6 +1127,7 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE_NAME:mosquito:mosquitos:mosquito]
 	[CREATURE_TILE:250][COLOR:0:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[BIOME:ANY_POOL]
 	[VERMIN_MICRO][VERMIN_GROUNDER][FREQUENCY:100][VERMIN_HATEABLE]
@@ -992,6 +1139,7 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[PREFSTRING:high-pitched buzz]
 	[PREFSTRING:ability to feast on blood]
 	[FLIER]
+	[CREATURE_CLASS:EDIBLE_FLYING_BUG]{+  Revision: let them be hunted as vermin.}
 	[CREPUSCULAR]
 	[NO_SLEEP]
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:750:600:439:1900:2900] 20 kph, NO DATA
@@ -1003,7 +1151,7 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[NOT_BUTCHERABLE]
 	[NOBONES]
 	[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:PROBOSCIS:2WINGS]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -1022,9 +1170,11 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[MAXAGE:1:1]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny flying pest insect.  She uses her long proboscis to suck blood from her host.]{+}
 		[APPLY_CREATURE_VARIATION:PROBOSCIS_SUCK_ATTACK]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny flying pest insect that buzzes and annoys.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:BLACK:1]
@@ -1039,8 +1189,11 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:mosquito man:mosquito men:mosquito man]
+		[DESCRIPTION:A small, naked, unsettling man with wide-set, enormous compound eyes.  He has a spindly body, thin legs, and four thin arms.  The veined wings on his back come down to his knees when folded.  His long probiscis carves into his prey as he feeds on flesh.]{+}
+		[APPLY_CREATURE_VARIATION:PROBOSCIS_NOSUCK_ATTACK]{+  Revision: gave mosquito men a unique, non-bloodsucking attack.}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:mosquito woman:mosquito women:mosquito woman]
+		[DESCRIPTION:A small, naked, unsettling woman with wide-set, enormous compound eyes.  She has a spindly body, thin legs, and four thin arms.  The veined wings on her back come down to her knees when folded.  Her long proboscis carves into her prey as she feeds on flesh and blood.]{+}
 		[APPLY_CREATURE_VARIATION:PROBOSCIS_SUCK_ATTACK]
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
@@ -1060,15 +1213,22 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_MOSQUITO]
 	[COPY_TAGS_FROM:MOSQUITO]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, spindly, flying pest insect with enormous eyes and large, veined wings.  She carves into her prey with her long probiscis, feeding on flesh and blood.]{+}
+		[LARGE_PREDATOR]{+  Revision: best be cautious.}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, spindly, flying pest insect with enormous eyes and large, veined wings.  He flies and buzzes overhead, unnerving and annoying those below.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[GO_TO_START]
 	[NAME:giant mosquito:giant mosquitos:giant mosquito]
 	[CASTE_NAME:giant mosquito:giant mosquitos:giant mosquito]
+	[CHILD:1]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A huge monster in the shape of a mosquito.]
 	[POPULATION_NUMBER:15:30]
 	[CLUSTER_NUMBER:1:1]
@@ -1076,6 +1236,7 @@ Mosquitos were sponsored by the generous contributions of the Bay 12 community.
 	[COLOR:0:0:1]
 	[PET_EXOTIC]
 	[PETVALUE:500]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
 	[MOUNT_EXOTIC]
 	[GO_TO_END]
 	[PREFSTRING:high-pitched buzz]
@@ -1097,6 +1258,7 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 	[CARNIVORE]
 	[PET_EXOTIC]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_GROUNDER][VERMIN_HATEABLE]
 	[POPULATION_NUMBER:250:500]
@@ -1112,7 +1274,7 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 	[NOPAIN][EXTRAVISION][NOSTUN][NOFEAR]
 	[NOBONES]
 	[BODY:SPIDER:2EYES:HEART:GUTS:BRAIN:MOUTH]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 	[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -1131,8 +1293,10 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 	[MAXAGE:2:3]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny black spider that lacks a web but can leap short distances.  She tethers herself to the ground before she jumps, just in case.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny black spider that lacks a web but can leap short distances.  He tethers himself to the ground before he jumps, just in case.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:BLACK:1]
@@ -1147,8 +1311,10 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:jumping spider man:jumping spider men:jumping spider man]
+		[DESCRIPTION:A small, naked, unsettling man covered in thick hair that twitches constantly.  His large eyes stare without blinking.  He has twitching chelicerae at the end of a broad head and six chitinous arms.  He jumps long distances, tethernig himself to the ground first before leaping.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:jumping spider woman:jumping spider women:jumping spider woman]
+		[DESCRIPTION:A small, naked, unsettling woman covered in thick hair that twitches constantly.  Her large eyes stare without blinking.  She has twitching chelicerae at the end of a broad head and six chitinous arms.  She jumps long distances, tethering herself to the ground first before leaping.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -1167,16 +1333,22 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 
 [CREATURE:GIANT_JUMPING_SPIDER]
 	[COPY_TAGS_FROM:SPIDER_JUMPING]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, agile black spider that lacks a web but can leap long distances, tethering herself to the ground first before leaping.  Her thick body hair twitches constantly; she stares unblinking with large eyes.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, agile black spider that lacks a web but can leap long distances, tethering himself to the ground first before leaping.  His thick body hair twitches constantly; he stares unblinking with large eyes.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]
 	[GO_TO_START]
 	[NAME:giant jumping spider:giant jumping spiders:giant jumping spider]
 	[CASTE_NAME:giant jumping spider:giant jumping spiders:giant jumping spider]
+	[CHILD:1][GENERAL_CHILD_NAME:giant jumping spiderling:giant jumping spiderlings:giant jumping spiderling]{+  Revision: taming requires a child tag (bug 7983).}
 	[DESCRIPTION:A huge monster in the form of a jumping spider.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -1184,6 +1356,10 @@ Jumping spiders were sponsored by the generous contributions of the Bay 12 commu
 	[COLOR:0:0:1]
 	[PET_EXOTIC]
 	[PETVALUE:500]
+	[MAXAGE:6:9]{+                             Revision: let them live long enough to be worth taming.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_GROUND_BUG]{+  Revision: too few creatures ate vermin.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_FLYING_BUG]{+  Revision: too few creatures ate vermin.}
+	[LARGE_PREDATOR]{+                         Revision: best be cautious.}
 	[MOUNT_EXOTIC]
 	[GO_TO_END]
 	[PREFSTRING:striking appearance]
@@ -1200,6 +1376,7 @@ Termites were sponsored by the generous contributions of the Bay 12 community.
 	[NAME:termite:termites:termite]
 	[CREATURE_TILE:250][COLOR:7:0:1]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: compound eyes have a wide field of view.}
 	[BIOME:NOT_FREEZING]
 	[VERMIN_SOIL_COLONY][FREQUENCY:100]
 	[UBIQUITOUS]
@@ -1232,22 +1409,26 @@ Termites were sponsored by the generous contributions of the Bay 12 community.
 	[NOBONES]
 	[CASTE:WORKER]
 		[CASTE_NAME:worker termite:worker termites:worker termite]
+		[DESCRIPTION:A tiny pest insect that lives in hives with many castes.  In large numbers they're capable of destroying large wooden structures.  It forages for food and maintains the nest.]{+}
 		[POP_RATIO:10000]
 	[CASTE:SOLDIER]
 		[CASTE_NAME:soldier termite:soldier termites:soldier termite]
+		[DESCRIPTION:A tiny pest insect that lives in hives with many castes.  In large numbers they're capable of destroying large wooden structures.  Its only job is to defend the colony: it can't even eat by itself.]{+}
 		[POP_RATIO:1000]
 	[CASTE:KING]
 		[MALE]
 		[CASTE_NAME:king termite:king termites:king termite]
+		[DESCRIPTION:A tiny pest insect that lives in hives with many castes.  In large numbers they're capable of destroying large wooden structures.  As the mate of the queen, he lives to serve and to mate.]{+}
 		[POP_RATIO:1]
 	[CASTE:QUEEN]
 		[FEMALE]
 		[CASTE_NAME:queen termite:queen termites:queen termite]
+		[DESCRIPTION:A tiny pest insect that lives in hives with many castes.  In large numbers they're capable of destroying large wooden structures.  She breeds and lays eggs, spending all of her time with her king.]{+}
 		[POP_RATIO:1]
 	[SELECT_CASTE:ALL]
 		[BODY:INSECT:2EYES:HEART:GUTS:BRAIN:MOUTH]
 		[BODYGLOSS:INSECT_UPPERBODY:INSECT_LOWERBODY]
-		[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+		[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 		[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 		[BODY_DETAIL_PLAN:EXOSKELETON_TISSUE_LAYERS:CHITIN:FAT:MUSCLE]
 		[BODY_DETAIL_PLAN:STANDARD_HEAD_POSITIONS]
@@ -1266,6 +1447,7 @@ Moon snails were sponsored by the generous contributions of the Bay 12 community
 	[DESCRIPTION:A tiny predatory mollusk.  It is brightly colored.]
 	[NAME:moon snail:moon snails:moon snail]
 	[CASTE_NAME:moon snail:moon snails:moon snail]
+	[GENERAL_CHILD_NAME:moon snail larva:moon snail larvae:moon snail larva]{+}
 	[CREATURE_TILE:249][COLOR:4:0:1]
 	[PETVALUE:10]
 	[VERMIN_SOIL][FREQUENCY:100][VERMIN_HATEABLE]
@@ -1280,7 +1462,7 @@ Moon snails were sponsored by the generous contributions of the Bay 12 community
 	[PREFSTRING:predatory nature]
 	[PREFSTRING:striking coloration]
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:SHELL:HEART:GUTS:BRAIN:MOUTH]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[REMOVE_MATERIAL:HAIR]
 		[REMOVE_MATERIAL:BONE]
 		[USE_MATERIAL_TEMPLATE:SHELL:SHELL_TEMPLATE]
@@ -1308,8 +1490,10 @@ Moon snails were sponsored by the generous contributions of the Bay 12 community
 	[EXTRAVISION]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, colorful, predatory mollusk that lives in a shell.  She bores holes into the shells of her prey and eats the flesh with her long proboscis.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, colorful, predatory mollusk that lives in a shell.  He bores holes into the shells of his prey and eats the flesh with his long proboscis.]{+}
 	[SELECT_CASTE:ALL]
 	[SET_TL_GROUP:BY_CATEGORY:ALL:SHELL]
 		[TL_COLOR_MODIFIER:RED:1]
@@ -1320,15 +1504,19 @@ Moon snails were sponsored by the generous contributions of the Bay 12 community
 
 [CREATURE:MOON_SNAIL_MAN]
 	[COPY_TAGS_FROM:MOON_SNAIL]
-	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]{+  Revision: they make more sense without legs.}
+	[APPLY_CREATURE_VARIATION:AQUATIC_HUMANOID]{+  Revision: turn aquatic humanoids into amphibians.}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:moon snail man:moon snail men:moon snail man]
+		[DESCRIPTION:A small, naked, bloated man with a great, colorful shell on his back, a flattened, antennaed head, and eyes at the end of long stalks.  His thighs fuse into a long, legless body that flows through the water.  His colorful appearance belies his predatory nature.  He can't survive on land.]{+}
+		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]{+  Revision: well, he's man-shaped.}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:moon snail woman:moon snail women:moon snail woman]
+		[DESCRIPTION:A small, naked, bloated woman with a great, colorful shell on her back, a flattened, antennaed head, and eyes at the end of long stalks.  Her thighs merge into a long, legless body that flows through the water.  Her colorful appearance belies her predatory nature.  She can't survive on land.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
+	{APPLY_CREATURE_VARIATION:KICK_ATTACK Revision: they make more sense without legs.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -1343,26 +1531,35 @@ Moon snails were sponsored by the generous contributions of the Bay 12 community
 
 [CREATURE:GIANT_MOON_SNAIL]
 	[COPY_TAGS_FROM:MOON_SNAIL]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, colorful, predatory mollusk that envelops her prey, then bores holes into shell and flesh and feasts.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, colorful, predatory mollusk that envelops his prey, then bores holes into shell and flesh and feasts.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:100700]
 	[GO_TO_START]
 	[NAME:giant moon snail:giant moon snails:giant moon snail]
 	[CASTE_NAME:giant moon snail:giant moon snails:giant moon snail]
 	[DESCRIPTION:A huge monster in the shape of a moon snail.]
+	[CHILD:1][GENERAL_CHILD_NAME:giant moon snail larva:giant moon snail larvae:giant moon snail larva]{+  Revision: taming requires a child tag (bug 7983).}
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
 	[CREATURE_TILE:'S']
 	[COLOR:4:0:1]
 	[PET_EXOTIC]
 	[PETVALUE:500]
-	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR][AMBUSHPREDATOR]{+  Revision: best be cautious.}
+	{MOUNT_EXOTIC Revision: giant moon snails make terrible mounts.}
 	[GO_TO_END]
 	[PREFSTRING:predatory nature]
 	[PREFSTRING:striking coloration]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_EDGE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 
@@ -1372,13 +1569,14 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 
 [CREATURE:SPIDER_BROWN_RECLUSE]
 	[DESCRIPTION:A tiny brown bug known for its powerful poison.]
-	[NAME:brown recluse spider:brown recluse spiders:brown recluse spider]
-	[CASTE_NAME:brown recluse spider:brown recluse spiders:brown recluse spider]
+	[NAME:recluse spider:recluse spiders:recluse spider]{:brown recluse spider:brown recluse spiders:brown recluse spider}
+	[CASTE_NAME:recluse spider:recluse spiders:recluse spider]{:brown recluse spider:brown recluse spiders:brown recluse spider}
 	[CREATURE_TILE:249][COLOR:6:0:0]
 	[CARNIVORE]
 	[PET_EXOTIC]
 	[WEBIMMUNE]
 	[NATURAL]
+	[VISION_ARC:30:360]{+  Revision: recluse spiders have good vision.}
 	[BIOME:FOREST_TEMPERATE_BROADLEAF]
 	[VERMIN_GROUNDER][VERMIN_HATEABLE]
 	[POPULATION_NUMBER:250:500]
@@ -1393,19 +1591,19 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[NOPAIN][EXTRAVISION][NOSTUN][NOFEAR]
 	[NOBONES]
 	[BODY:SPIDER:2EYES:HEART:GUTS:BRAIN:MOUTH]
-	[BODY_DETAIL_PLAN:CHITIN_MATERIALS]
+	[BODY_DETAIL_PLAN:CHITIN_SMALL_MATERIALS]{:CHITIN_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:CHITIN_TISSUES]
 	[USE_MATERIAL_TEMPLATE:VENOM:CREATURE_EXTRACT_TEMPLATE]
-		[STATE_NAME:ALL_SOLID:frozen brown recluse spider venom]
-		[STATE_ADJ:ALL_SOLID:frozen brown recluse spider venom]
-		[STATE_NAME:LIQUID:brown recluse spider venom]
-		[STATE_ADJ:LIQUID:brown recluse spider venom]
-		[STATE_NAME:GAS:boiling brown recluse spider venom]
-		[STATE_ADJ:GAS:boiling brown recluse spider venom]
+		[STATE_NAME:ALL_SOLID:frozen recluse spider venom]{:frozen brown recluse spider venom}
+		[STATE_ADJ:ALL_SOLID:frozen recluse spider venom]{:frozen brown recluse spider venom}
+		[STATE_NAME:LIQUID:recluse spider venom]{:brown recluse spider venom}
+		[STATE_ADJ:LIQUID:recluse spider venom]{:brown recluse spider venom}
+		[STATE_NAME:GAS:boiling recluse spider venom]{:boiling brown recluse spider venom}
+		[STATE_ADJ:GAS:boiling recluse spider venom]{:boiling brown recluse spider venom}
 		[PREFIX:NONE]
 		[ENTERS_BLOOD]
 		[SYNDROME]
-			[SYN_NAME:brown recluse spider bite]
+			[SYN_NAME:recluse spider bite]{:brown recluse spider bite}
 			[SYN_AFFECTED_CLASS:GENERAL_POISON]
 			[SYN_IMMUNE_CREATURE:SPIDER_BROWN_RECLUSE:ALL]
 			[SYN_INJECTED]
@@ -1434,8 +1632,10 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[MAXAGE:1:2]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny brown spider that hunts in dark places.  She has long, spindly legs and necrotic venom.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny brown spider that hunts in dark places.  He has long, spindly legs and necrotic venom.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:CHITIN]
 			[TL_COLOR_MODIFIER:BROWN:1]
@@ -1448,16 +1648,16 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[COPY_TAGS_FROM:SPIDER_BROWN_RECLUSE]
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:STATE_NAME]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:brown recluse spider man]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:recluse spider man]{:brown recluse spider man}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:STATE_ADJ]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:brown recluse spider man]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:recluse spider man]{:brown recluse spider man}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:SYN_NAME]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:brown recluse spider man]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:recluse spider man]{:brown recluse spider man}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:SYN_IMMUNE_CREATURE]
 		[CVCT_TARGET:SPIDER_BROWN_RECLUSE]
@@ -1466,10 +1666,13 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:brown recluse spider man:brown recluse spider men:brown recluse spider man]
+		[CASTE_NAME:recluse spider man:recluse spider men:recluse spider man]{:brown recluse spider man:brown recluse spider men:brown recluse spider man}
+		[DESCRIPTION:A small, naked, unsettling man with dripping chelicerae and beady eyes set high on his stubby head.  He has a lithe body, six long, spindly arms, and a painful bite that injects necrotic venom.  He hunts in dark places.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:brown recluse spider woman:brown recluse spider women:brown recluse spider woman]
+		[CASTE_NAME:recluse spider woman:recluse spider women:recluse spider woman]{:brown recluse spider woman:brown recluse spider women:brown recluse spider woman}
+		[DESCRIPTION:A small, naked, unsettling woman with dripping chelicerae and beady eyes set high on her stubby head.  She has a lithe body, six long, spindly limbs, and a painful bite that injects necrotic venom.  She hunts in dark places.]{+}
 	[SELECT_CASTE:ALL]
+	[THICKWEB]{+  Revision: their webs can trap.}
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
 	[APPLY_CREATURE_VARIATION:MOUTH_BITE_VENOM_ATTACK]
@@ -1477,7 +1680,7 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:brown recluse spider man:brown recluse spider men:brown recluse spider man]
+	[NAME:recluse spider man:recluse spider men:recluse spider man]{:brown recluse spider man:brown recluse spider men:brown recluse spider man}
 	[DESCRIPTION:A person with the head and arms of a brown recluse spider.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -1489,31 +1692,36 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[COPY_TAGS_FROM:SPIDER_BROWN_RECLUSE]
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:STATE_NAME]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:giant brown recluse spider]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:giant recluse spider]{:giant brown recluse spider}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:STATE_ADJ]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:giant brown recluse spider]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:giant recluse spider]{:giant brown recluse spider}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:SYN_NAME]
-		[CVCT_TARGET:brown recluse spider]
-		[CVCT_REPLACEMENT:giant brown recluse spider]
+		[CVCT_TARGET:recluse spider]{:brown recluse spider}
+		[CVCT_REPLACEMENT:giant recluse spider]{:giant brown recluse spider}
 	[CV_CONVERT_TAG]
 		[CVCT_MASTER:SYN_IMMUNE_CREATURE]
 		[CVCT_TARGET:SPIDER_BROWN_RECLUSE]
 		[CVCT_REPLACEMENT:GIANT_BROWN_RECLUSE_SPIDER]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, dangerous brown spider that hunts in dark places.  She scuttles on spindly legs and injects necrotic venom into her prey with large chelicerae.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, dangerous brown spider that hunts in dark places.  He scuttles on spindly legs and injects necrotic venom into his prey with large chelicerae.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:20000700]
 	[APPLY_CREATURE_VARIATION:MOUTH_BITE_VENOM_ATTACK]
 	[GO_TO_START]
-	[NAME:giant brown recluse spider:giant brown recluse spiders:giant brown recluse spider]
-	[CASTE_NAME:giant brown recluse spider:giant brown recluse spiders:giant brown recluse spider]
+	[NAME:giant recluse spider:giant recluse spiders:giant recluse spider]{:giant brown recluse spider:giant brown recluse spiders:giant brown recluse spider}
+	[CASTE_NAME:giant recluse spider:giant recluse spiders:giant recluse spider]{:giant brown recluse spider:giant brown recluse spiders:giant brown recluse spider}
 	[DESCRIPTION:A huge monster in the shape of a brown recluse spider.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -1522,6 +1730,11 @@ Brown recluse spiders were sponsored by the generous contributions of the Bay 12
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+                             Revision: let them live long enough to be worth taming.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_GROUND_BUG]{+  Revision: too few creatures ate vermin.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_FLYING_BUG]{+  Revision: too few creatures ate vermin.}
+	[LARGE_PREDATOR]{+                         Revision: best be cautious.}
+	[THICKWEB]{+                               Revision: their webs can trap.}
 	[GO_TO_END]
 	[PREFSTRING:venomous bite]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALKING_GAITS:900:750:600:439:1900:2900] 20 kph
@@ -1532,7 +1745,7 @@ Snails were sponsored by the generous contributions of the Bay 12 community.
 	Liegrean
 
 [CREATURE:SNAIL]
-	[DESCRIPTION:A tiny land mollusk with a large shell.]
+	[DESCRIPTION:A tiny, mucus-coated land mollusk with a large shell.  It has wandering eyestalks and a long mantle on its back.]{:A tiny land mollusk with a large shell.}
 	[NAME:snail:snails:snail]
 	[CASTE_NAME:snail:snails:snail]
 	[CREATURE_TILE:249][COLOR:7:0:0]
@@ -1544,8 +1757,9 @@ Snails were sponsored by the generous contributions of the Bay 12 community.
 	[BIOME:NOT_FREEZING]
 	[POPULATION_NUMBER:250:500]
 	[PREFSTRING:shells]
+	[VISION_ARC:0:360]{+  Revision: eyestalks have good vision.}
 	[BODY:BASIC_1PARTBODY:BASIC_HEAD:HEART:GUTS:BRAIN:MOUTH:SHELL:2EYESTALKS]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[REMOVE_MATERIAL:HAIR]
 		[REMOVE_MATERIAL:BONE]
 		[USE_MATERIAL_TEMPLATE:SHELL:SHELL_TEMPLATE]
@@ -1582,17 +1796,17 @@ Snails were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:SNAIL_MAN]
 	[COPY_TAGS_FROM:SNAIL]
-	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]{:ANIMAL_PERSON Revision: they make more sense without legs.}
 	[GO_TO_END]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
+	{APPLY_CREATURE_VARIATION:KICK_ATTACK Revision: they make more sense without legs.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
 	[NAME:snail man:snail men:snail man]
 	[CASTE_NAME:snail man:snail men:snail man]
-	[DESCRIPTION:A creature with the shape of a man, but with stalks for eyes, and a great shell on its back.]
+	[DESCRIPTION:A small, bloated mollusk-like humanoid, naked and sexless with a long, mucus-covered body and wandering eyestalks on a flattened, antennaed head.  Legless, it stoops forward to support its great shell and writhes forward to move.]{:A creature with the shape of a man, but with stalks for eyes, and a great shell on its back.}
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
 	[MAXAGE:60:80]
@@ -1610,7 +1824,7 @@ Snails were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_START]
 	[NAME:giant snail:giant snails:giant snail]
 	[CASTE_NAME:giant snail:giant snails:giant snail]
-	[DESCRIPTION:A huge monster in the form of a snail.]
+	[DESCRIPTION:A large, lumbering, mucus-coated mollusk with wandering eyestalks and a great shell that it carries effortlessly.]{:A huge monster in the form of a snail.}
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
 	[CREATURE_TILE:'S']
@@ -1620,5 +1834,6 @@ Snails were sponsored by the generous contributions of the Bay 12 community.
 	[MOUNT_EXOTIC]
 	[GO_TO_END]
 	[PREFSTRING:shells]
+	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]{+  Revision: biting seems appropriate here.}
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:9000:8900:8825:8775:9500:9900] 1 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:9000:8900:8825:8775:9500:9900] 1 kph

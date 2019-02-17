@@ -69,7 +69,7 @@ creature_large_tropical
 		[ATTACK_VERB:kick:kicks]
 		[ATTACK_CONTACT_PERC:100]
 		[ATTACK_PREPARE_AND_RECOVER:4:4]
-		[ATTACK_PRIORITY:MAIN]
+		[ATTACK_PRIORITY:SECOND]{+  Revision: made kicking a secondary attack.}
 		[ATTACK_FLAG_WITH]
 		[ATTACK_FLAG_BAD_MULTIATTACK]
 	[ATTACK:GORE:BODYPART:BY_CATEGORY:TUSK]
@@ -79,6 +79,7 @@ creature_large_tropical
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 		[ATTACK_PRIORITY:MAIN]
 		[ATTACK_FLAG_WITH]
+		[ATTACK_VELOCITY_MODIFIER:500]{+  Revision: horn attacks are too deadly, so reduce the velocity.}
 	[DIURNAL]
 	[HOMEOTHERM:10066]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:1422:1127:831:488:2500:3700] 18 kph
@@ -88,8 +89,10 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:An immense, hairless mammal that grazes in forest and grassland in groups.  She eats by lifting plants with her long trunk and attacks with long tusks when she gets angry.  She fans herself with her large, flapping ears and splashes herself to keep cool.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:An immense, hairless mammal that grazes in forest and grassland in groups.  He eats by lifting plants with his long trunk and attacks with long tusks when he gets angry.  He fans himself with his large, flapping ears and splashes himself to keep cool.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
@@ -107,13 +110,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:elephant man:elephant men:elephant man]
+		[DESCRIPTION:A giant, naked, heavy man with a thin tail, dangerous looking tusks, and a long, grasping trunk.  He flaps his large ears to keep cool.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:elephant woman:elephant women:elephant woman]
+		[DESCRIPTION:A giant, naked, heavy woman with a thin tail, dangerous looking tusks, and a long, grasping trunk.  She flaps her large ears to keep cool.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:TUSK_STAB_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -138,6 +143,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immeasurable, tusked mammal that towers over everything with legs thicker than tree trunks and menacing tusks of great length.  Her long trunk uproots trees and shrubs as she looks for food to sate her huge appetite.  She cools herself by flapping her large ears.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immeasurable, tusked mammal that towers over everything with legs thicker than tree trunks and menacing tusks of great length.  His long trunk uproots trees and shrubs as he looks for food to sate his huge appetite.  He cools himself by flapping his large ears.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:800]
 	[GO_TO_START]
@@ -259,14 +268,16 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, stout mammal that lives in grass and woodland.  Two wrinkled flaps of skin hang from her long, wide snout.  She defends herself with four sharp tusks.  She can be aggressive when she needs to be.]{+}
 		[MULTIPLE_LITTER_RARE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, stout mammal that lives in grass and woodland.  Two wrinkled flaps of skin hang from his long, wide snout.  He defends himself with four sharp tusks.  He can be aggressive when he needs to be.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -280,13 +291,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:warthog man:warthog men:warthog man]
+		[DESCRIPTION:A tall, naked, furry man with four jagged tusks and a long, wide snout.  Two fleshy flaps of skin hang from his face.  His stocky body slumps forward at his shoulders.  His thin tail swishes back and forth over his bum in the heat.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:warthog woman:warthog women:warthog woman]
+		[DESCRIPTION:A tall, naked, furry woman with four jagged tusks and a long, wide snout.  Two fleshy flaps of skin hang from her face.  Her stocky body slumps forward at her shoulders.  Her tail swishes back and forth over her bum in the heat.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:HOOF_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:TUSK_STAB_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -311,6 +324,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A huge, stout beast with two fleshy, wrinkled flaps of skin that hang from her long, wide snout.  Her four jagged tusks look dangerous.  Her thin tail swishes back and forth in the heat.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A huge, stout beast with two fleshy, wrinkled flaps of skin that hang from his long, wide snout.  His four jagged tusks look dangerous.  His thin tail swishes back and forth in the heat.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:933]
 	[GO_TO_START]
@@ -384,6 +401,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -410,13 +428,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, tawny cat with a short, rounded head, round ears, and a tufted tail.  She lives in the grasslands with other females and their one mate.  The pack hunts together and can fell extremely large prey.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, maned, tawny cat with a short, rounded head, round ears, and a tufted tail.  When not fighting for mates he lives in the grassland with several of them.  His pack hunts together and can fell extremely large prey.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -432,8 +452,10 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:lion man:lion men:lion man]
+		[DESCRIPTION:A tall, furry man with a sauntering, relaxed gait.  He has the head of a lion: his shaggy mane looks well combed.  His round ears and tufted tail flick and swish with his mood.  He enjoys being naked; he lounges in the heat and sunbathes in just his silky fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:lion woman:lion women:lion woman]
+		[DESCRIPTION:A tall, furry woman with a sauntering, relaxed gait.  She has the head of a lion.  Her round ears and tufted tail flick and swish with her mood.  She enjoys being naked; she lounges in the heat and sunbathes in just her silky fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -460,6 +482,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immense, tawny, majestic cat with a powerful body, a short, rounded head, round ears, and a tufted tail.  She stalks wild grassland, hunting for large prey to sate her enormous appetite.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immense, tawny, majestic cat with a powerful body, a short, rounded head, round ears, and a tufted tail.  He stalks wild grassland, hunting for large prey to sate his enormous appetite.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:850]
 	[GO_TO_START]
@@ -533,6 +559,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -559,13 +586,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, agile cat with a spotted, rosetted coat.  She hunts with great speed, bounding after her prey on long legs.  She's deceptively strong and adaptable, capable of dragging large carcasses and surviving where other cats can't.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, agile cat with a spotted, rosetted coat.  He hunts with great speed, bounding after his prey on long legs.  He's deceptively strong and adaptable, capable of dragging large carcasses and surviving where other cats can't.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:SPOTS_ORANGE_BLACK:990:BLACK:10:WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -581,8 +610,10 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:leopard man:leopard men:leopard man]
+		[DESCRIPTION:A short, naked cat man with a spotted, rosetted coat, a long, swishing tail, and a lithe body.  He's deceptively strong and resourceful.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:leopard woman:leopard women:leopard woman]
+		[DESCRIPTION:A short, naked cat woman with a spotted, rosetted coat, a long, swishing tail, and a lithe body.  She's deceptively strong and resourceful.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -609,6 +640,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, agile cat with a spotted, rosetted coat and a strong, lean body.  She runs with frightening speed, bounding after her prey with great strides.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, agile cat with a spotted, rosetted coat and a strong, lean body.  He runs with frightening speed, bounding after his prey with great strides.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1120]
 	[GO_TO_START]
@@ -682,6 +717,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -708,13 +744,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, solitary cat with a spotted, rosetted coat.  She has short legs and a shorter tail than other cats, making her look stocky.  She stalks and silently ambushes her prey, biting with powerful jaws.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, solitary cat with a spotted, rosetted coat.  He has short legs and a shorter tail than other cats, making him look stocky.  He stalks and silently ambushes his prey, biting with powerful jaws.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:SPOTS_ORANGE_BLACK:940:BLACK:60:WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -730,8 +768,10 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:jaguar man:jaguar men:jaguar man]
+		[DESCRIPTION:A midsized, naked cat man with a spotted, rosetted coat, a short, swishing tail, and ears that flick about.  He walks cautiously and quietly.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:jaguar woman:jaguar women:jaguar woman]
+		[DESCRIPTION:A midsized, naked cat woman with a spotted, rosetted coat, a short, swishing tail, and ears that flick about.  She walks cautiously and quietly.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -758,6 +798,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A huge, solitary, muscular cat with a spotted, rosetted coat, a stocky body, and a short tail relative to her large size.  She stalks and silently ambushes her prey, biting and crushing with her powerful jaws.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A huge, solitary, muscular cat with a spotted, rosetted coat, a stocky body, and a short tail relative to his large size.  He stalks and silently ambushes his prey, biting and crushing with his powerful jaws.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:994]
 	[GO_TO_START]
@@ -833,6 +877,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -859,13 +904,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, striped cat with powerful legs and a long, swishing tail.  Aloof and territorial, her aggressive nature sometimes drives her to attack people.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, striped cat with powerful legs and a long, swishing tail.  Aloof and territorial, his aggressive nature sometimes drives him to attack people.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:STRIPES_ORANGE_BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -881,8 +928,10 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:tiger man:tiger men:tiger man]
+		[DESCRIPTION:A tall, furry man with a swishing tail and the head of a tiger.  He walks quietly and carefully: his ears flick as he listens.  He enjoys being naked; he's comfy in just his striped fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:tiger woman:tiger women:tiger woman]
+		[DESCRIPTION:A tall, furry woman with a swishing tail and the head of a tiger.  She walks quietly and carefully: her ears flick as she listens.  She enjoys being naked; she's comfy in just her striped fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -909,6 +958,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immense striped cat with powerful, slender legs and a long, swishing tail.  She's easily the largest of the giant cats.  Aloof and territorial, she claims a vast area for herself that she protects aggressively.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immense striped cat with powerful, slender legs and a long, swishing tail.  He's easily the largest of the giant cats.  Aloof and territorial, he claims a vast area for himself that he protects aggressively.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:842]
 	[GO_TO_START]
@@ -981,6 +1034,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -1007,13 +1061,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, spotted cat with thin legs, a slender body, a small, rounded head, and a long, swishing tail.  Her ears flick this way and that as she lies in wait for her prey.  She runs with great speed, bounding and leaping through tall grass at a great pace.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, spotted cat with thin legs, a slender body, a small, rounded head, and a long, swishing tail.  His ears flick this way and that as he lies in wait for his prey.  He runs with great speed, bounding and leaping through tall grass at a great pace.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:SPOTS_TAN_BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1029,8 +1085,10 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:cheetah man:cheetah men:cheetah man]
+		[DESCRIPTION:A short, furry man with flicking ears, a swishing tail, and the head of a cheetah.  Tear-like black markings fall from his watching eyes down to his mouth and down his cheeks.  He runs with great speed, leaping and bounding as he frolics.  He enjoys being naked; he's comfy in just his spotted fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:cheetah woman:cheetah women:cheetah woman]
+		[DESCRIPTION:A short, furry woman with flicking ears, a swishing tail, and the head of a cheetah.  Tear-like black markings fall from her watching eyes down to her mouth and down her cheeks.  She runs with great speed, leaping and bounding as she frolics.  She enjoys being naked; she's comfy in just her spotted fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -1057,6 +1115,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, spotted cat with a slender body, a small, rounded head, and a small, swishing tail.  She crouches in tall, overgrown grass and watches.  When prey draws near she bounds after them at an incredible pace on slender, powerful legs.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, spotted cat with a slender body, a small, rounded head, and a small, swishing tail.  He crouches in tall, overgrown grass and watches.  When prey draws near he bounds after them at an incredible pace on slender, powerful legs.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1120]
 	[GO_TO_START]
@@ -1096,11 +1158,13 @@ creature_large_tropical
 	[BIOME:SAVANNA_TROPICAL]
 	[BIOME:GRASSLAND_TROPICAL]
 	[BENIGN][MEANDERER][NATURAL]
-	[BODY:QUADRUPED_NECK_HOOF:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:GENERIC_TEETH:RIBCAGE]
+	[BODY:QUADRUPED_NECK_HOOF:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:GENERIC_TEETH:RIBCAGE:2HEAD_HORN]{:RIBCAGE  Revision: added horns.}
 	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
 		[USE_MATERIAL_TEMPLATE:HOOF:HOOF_TEMPLATE]
+		[USE_MATERIAL_TEMPLATE:HORN:HORN_TEMPLATE]{+  Revision: added horns.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[USE_TISSUE_TEMPLATE:HOOF:HOOF_TEMPLATE]
+		[USE_TISSUE_TEMPLATE:HORN:HORN_TEMPLATE]{+    Revision: added horns.}
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
 	[SELECT_TISSUE_LAYER:HEART:BY_CATEGORY:HEART]
@@ -1151,6 +1215,8 @@ creature_large_tropical
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 		[ATTACK_PRIORITY:SECOND]
 		[ATTACK_FLAG_CANLATCH]
+	[APPLY_CREATURE_VARIATION:HORN_GORE_ATTACK]{+  Revision: gazelles have horns now, why not use them.}
+	[APPLY_CREATURE_VARIATION:HORN_BUTT_ATTACK]{+  Revision: gazelles have horns now, why not use them.}
 	[DIURNAL]
 	[HOMEOTHERM:10067]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:327:218:109:1900:2900] 80 kph
@@ -1160,14 +1226,16 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, skittish, agile herbivore with spiral horns, long, hooved legs, and a slender, light body.  She lives with a large herd and runs in leaps and bounds through the tall grass.]{+}
 		[MULTIPLE_LITTER_RARE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, skittish, agile herbivore with spiral horns, long, hooved legs, and a slender, light body.  He lives with a large herd and runs in leaps and bounds through the tall grass.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1181,12 +1249,16 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:gazelle man:gazelle men:gazelle man]
+		[DESCRIPTION:A small, furry man with slender, hooved legs, a short tail, and the head of a gazelle with long, spiral horns and tall ears.  He runs quickly and gracefully with leaps and bounds.  He enjoys being naked; he's comfy in just his soft fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:gazelle woman:gazelle women:gazelle woman]
+		[DESCRIPTION:A small, furry woman with slender, hooved legs, a short tail, and the head of a gazelle with long, spiral horns and tall ears.  She runs quickly and gracefully with leaps and bounds.  She enjoys being naked; she's comfy in just her soft fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:HOOF_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK              Revision: biting's a daft idea.}
+	[APPLY_CREATURE_VARIATION:HORN_GORE_SECONDARY_ATTACK]{+  Revision: gazelle people have horns, why not use them.}
+	[APPLY_CREATURE_VARIATION:HORN_BUTT_SECONDARY_ATTACK]{+  Revision: gazelle people have horns, why not use them.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -1206,6 +1278,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, skittish, aloof herbivore with long spiral horns, long legs, and a tall, slender body.  She runs with great leaps and bounds, fleeing nervously when she feels threatened.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, skittish, aloof herbivore with long spiral horns, long legs, and a tall, slender body.  He runs with great leaps and bounds, fleeing nervously when he feels threatened.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1709]
 	[GO_TO_START]
@@ -1233,6 +1309,9 @@ creature_large_tropical
 	[CREATURE_TILE:'m'][COLOR:1:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:50]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: monkeys happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: monkeys happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: monkeys happily steal things.}
 	[PET_EXOTIC]
 	[TRAINABLE]
 	[NATURAL]
@@ -1304,13 +1383,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, stocky monkey with a very short tail, a crushing bite, a blue face, and a blue bum.  She lives with a large group that sometimes raids settlements, destroying crops and stealing whatever they can.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, stocky monkey with a very short tail, a crushing bite, a blue face, and a blue bum.  He lives with a large group that sometimes raids settlements, destroying crops and stealing whatever they can.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 			NOTE: Need face colors.
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
@@ -1325,13 +1406,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:mandrill man:mandrill men:mandrill man]
+		[DESCRIPTION:A small, naked, furry man with a very short tail, a strong, stocky body, and long arms.  He has a memorable long, blue, hairless face and an equally memorable hairless blue bum.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:mandrill woman:mandrill women:mandrill woman]
+		[DESCRIPTION:A small, naked, furry woman with a very short tail, a strong, stocky body, and long arms.  She has a memorable long, blue, hairless face and an equally memorable hairless blue bum.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -1353,6 +1436,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, stocky, muscular monkey with a blue face, a blue bum, and a very short tail.  She raids crops and steals what she can, but otherwise keeps to herself.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, stocky, muscular monkey with a blue face, a blue bum, and a very short tail.  He raids crops and steals what he can, but otherwise keeps to himself.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1709]
 	[GO_TO_START]
@@ -1380,6 +1467,9 @@ creature_large_tropical
 	[CREATURE_TILE:'c'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+ Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+   Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+    Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1450,13 +1540,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, intelligent, sometimes vicious ape which lives with a large, complex tribe in tropical forest.  She has a round and mostly hairless face, prominent ears, and arms longer than her legs.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, intelligent, sometimes vicious ape which lives with a large, complex tribe in tropical forest.  He has a round and mostly hairless face, prominent ears, and arms longer than his legs.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1471,6 +1563,9 @@ creature_large_tropical
 	[CREATURE_TILE:'b'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1541,13 +1636,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, intelligent, and social ape with a carefree attitude toward sex.  She lives with a large and complex tribe in tropical forest.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, intelligent, and social ape with a carefree attitude toward sex.  He lives with a large and complex tribe in tropical forest.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1562,6 +1659,9 @@ creature_large_tropical
 	[CREATURE_TILE:'G'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[TRAINABLE]
 	[NATURAL]
@@ -1635,13 +1735,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large ape that lives quietly in the forest.  Her arms are longer than her legs, allowing her to walk upright on her knuckles and feet.  She lives in a complex social group lead by a large, dominant, silver-backed male.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large ape that lives quietly in the forest.  His arms are longer than his legs, allowing him to walk upright on his knuckles and feet.  He lives in a complex social group lead by a large, dominant, silver-backed male.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1656,6 +1758,9 @@ creature_large_tropical
 	[CREATURE_TILE:'O'][COLOR:6:0:0]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1726,13 +1831,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, intelligent ape that swings around the trees of tropical forest.  She has long, red fur, strong arms, short, bowed legs, and a distinctive hairless face.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, intelligent ape that swings around the trees of tropical forest.  He has long, red fur, strong arms, short, bowed legs, and a distinctive hairless face.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:ORANGE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1747,6 +1854,9 @@ creature_large_tropical
 	[CREATURE_TILE:'s'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1817,13 +1927,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, long-armed ape that lives in the trees.  She has long, shaggy fur and a mostly hairless face.  Her large throat pouch puffs up as she makes loud, resonating calls.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, long-armed ape that lives in the trees.  He has long, shaggy fur and a mostly hairless face.  His large throat pouch puffs up as he makes loud, resonating calls.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1838,6 +1950,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:6:0:0]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1849,7 +1964,7 @@ creature_large_tropical
 	[PREFSTRING:coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -1908,14 +2023,16 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, long-armed ape with white hands and feet.  She swings around the trees, eating fruit.  A ring of white fur surrounds her black face, and her bum is protected with tough, bony padding.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, long-armed ape with white hands and feet.  He swings around the trees, eating fruit.  A ring of white fur surrounds his black face, and his bum is protected with tough, bony padding.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			NOTE: More is needed here.
 			[TL_COLOR_MODIFIER:TAN:1:WHITE:1:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1930,6 +2047,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -1941,7 +2061,7 @@ creature_large_tropical
 	[PREFSTRING:coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2000,14 +2120,16 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, long-armed, fruit-eating ape that swings around the in the trees.  She has white eyebrows, black hands and feet, and tough, bony padding on her bum.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, long-armed, fruit-eating ape that swings around the in the trees.  He has white eyebrows, black hands and feet, and tough, bony padding on his bum.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			NOTE: More is needed here.
 			[TL_COLOR_MODIFIER:BLACK:1:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2022,6 +2144,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2033,7 +2158,7 @@ creature_large_tropical
 	[PREFSTRING:coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2092,13 +2217,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, long-armed ape with gray fur, a black cap, and a ring of white fur around her face.  She swings around the trees of tropical forest.  She can be very territorial, warning intruders with loud calls and songs.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, long-armed ape with gray fur, a black cap, and a ring of white fur around his face.  He swings around the trees of tropical forest.  He can be very territorial, warning intruders with loud calls and songs.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2113,6 +2240,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2124,7 +2254,7 @@ creature_large_tropical
 	[PREFSTRING:coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2183,13 +2313,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, fruit-eating ape that swings around in the trees.  She has long, curved fingers and a lean body, and hangs from trees with long arms.  Her gray fur has a blue tinge, and the top of her head is black.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, fruit-eating ape that swings around in the trees.  He has long, curved fingers and a lean body, and hangs from trees with long arms.  His gray fur has a blue tinge, and the top of his head is black.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2204,6 +2336,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2215,7 +2350,7 @@ creature_large_tropical
 	[PREFSTRING:white head rings]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2274,15 +2409,17 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, fruit-eating ape often found swinging from the trees in pairs.  She has long, shaggy fur and a ring of white fur around her black head.]{+}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, fruit-eating ape often found swinging from the trees in pairs.  He has long, shaggy fur and a ring of white fur around his black head.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
@@ -2298,6 +2435,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2309,7 +2449,7 @@ creature_large_tropical
 	[PREFSTRING:beautiful songs]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2368,13 +2508,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small ape that swings from the trees and eats fruit.  She has long, shaggy fur and a mostly hairless face.  She has beautiful, song-like calls that warn others and strengthen family bonds.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small ape that swings from the trees and eats fruit.  He has long, shaggy fur and a mostly hairless face.  He has beautiful, song-like calls that warn others and strengthen family bonds.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2389,6 +2531,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:7:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2400,7 +2545,7 @@ creature_large_tropical
 	[PREFSTRING:mask-like facial coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2459,13 +2604,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small fruit-eating ape that swings about the trees in tropical forest.  She has white eyebrows and a white ring of fur that surrounds her black face.  She sings elaborate songs with her mate, strengthening family bonds.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small fruit-eating ape that swings about the trees in tropical forest.  He has white eyebrows and a white ring of fur that surrounds his black face.  He sings elaborate songs with his mate, strengthening family bonds.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2480,6 +2627,9 @@ creature_large_tropical
 	[CREATURE_TILE:'g'][COLOR:0:0:1]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:500]
+	[CURIOUSBEAST_GUZZLER]{+  Revision: apes happily steal things.}
+	[CURIOUSBEAST_EATER]{+    Revision: apes happily steal things.}
+	[CURIOUSBEAST_ITEM]{+     Revision: apes happily steal things.}
 	[PET_EXOTIC]
 	[NATURAL]
 	[BENIGN][MEANDERER]
@@ -2491,7 +2641,7 @@ creature_large_tropical
 	[PREFSTRING:coloration]
 	[PREFSTRING:ability to swing through the trees]
 	[BODY:QUADRUPED_NECK_FRONT_GRASP:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:5TOES_FQ_FINGERS:5TOES_RQ_ANON:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE:FACIAL_FEATURES]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -2550,13 +2700,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, long-armed ape that lives in tropical forest.  She has a loud, song-like call often sung in concert.  She swings around in the trees, eating fruit.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, long-armed ape that lives in tropical forest.  He has a loud, song-like call often sung in concert.  He swings around in the trees, eating fruit.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2647,6 +2799,7 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, long-necked creature with a patchy coat, long legs, a big-lipped, long snout, and a large hump on her sturdy body.  She has been domesticated to carry passengers and cargo, but is nonetheless bad-tempered and will spit.]{+}
 		[MULTIPLE_LITTER_RARE]
 		[USE_MATERIAL_TEMPLATE:MILK:MILK_TEMPLATE]
 			[STATE_NAME:ALL_SOLID:frozen one-humped camel's milk]
@@ -2669,11 +2822,12 @@ creature_large_tropical
 			[PREFIX:NONE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, long-necked creature with a patchy coat, long legs, a big-lipped, long snout, and a large hump on his sturdy body.  He has been domesticated to carry passengers and cargo, but is nonetheless bad-tempered and will spit.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2687,13 +2841,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:one-humped camel man:one-humped camel men:one-humped camel man]
+		[DESCRIPTION:A tall, naked, furry man with a long neck and a fleshy hump on his sturdy back.  He has a patchy coat and a big-lipped, long face.  Well adapted to life in the desert, he likes to sunbathe on the warm sand.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:one-humped camel woman:one-humped camel women:one-humped camel woman]
+		[DESCRIPTION:A tall, naked, furry woman with a long neck and a fleshy hump on her sturdy back.  She has a patchy coat and a big-lipped, long face.  Well adapted to life in the desert, she likes to sunbathe on the warm sand.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2713,10 +2869,22 @@ creature_large_tropical
 
 [CREATURE:GIANT_CAMEL_1_HUMP]
 	[COPY_TAGS_FROM:CAMEL_1_HUMP]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_NAME]
+		[CVCT_TARGET:one-humped camel]
+		[CVCT_REPLACEMENT:giant one-humped camel]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_ADJ]
+		[CVCT_TARGET:one-humped camel]
+		[CVCT_REPLACEMENT:giant one-humped camel]
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immense, long-necked mammal with a patchy coat, long legs, a big-lipped, long snout, and a fleshy hump on her sturdy back.  She's well suited to living in the savage desert.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immense, long-necked mammal with a patchy coat, long legs, a big-lipped, long snout, and a fleshy hump on his sturdy back.  He's well suited to living in the savage desert.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:811]
 	[GO_TO_START]
@@ -2820,6 +2988,7 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, long-necked creature with a thick coat, long legs, a big-lipped, long snout, and two fleshy humps on her back.  She has been domesticated to carry passengers and cargo, but is nonetheless bad-tempered and will spit.]{+}
 		[MULTIPLE_LITTER_RARE]
 		[USE_MATERIAL_TEMPLATE:MILK:MILK_TEMPLATE]
 			[STATE_NAME:ALL_SOLID:frozen two-humped camel's milk]
@@ -2842,11 +3011,12 @@ creature_large_tropical
 			[PREFIX:NONE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, long-necked creature with a thick coat, long legs, a big-lipped, long snout, and two fleshy humps on his back.  He has been domesticated to carry passengers and cargo, but is nonetheless bad-tempered and will spit.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2860,13 +3030,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:two-humped camel man:two-humped camel men:two-humped camel man]
+		[DESCRIPTION:A tall, naked, furry man with a long neck and two large, fleshy humps on his sturdy back, one below the other.  He has a thick coat and a big-lipped long face.  Well suited to life in the desert, he likes to sunbathe on the warm sand.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:two-humped camel woman:two-humped camel women:two-humped camel woman]
+		[DESCRIPTION:A tall, naked, furry woman with a long neck and two large, fleshy humps on her sturdy back, one below the other.  She has a thick coat and a big-lipped long face.  Well suited to life in the desert, she likes to sunbathe on the warm sand.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2886,10 +3058,22 @@ creature_large_tropical
 
 [CREATURE:GIANT_CAMEL_2_HUMP]
 	[COPY_TAGS_FROM:CAMEL_2_HUMP]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_NAME]
+		[CVCT_TARGET:two-humped camel]
+		[CVCT_REPLACEMENT:giant two-humped camel]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_ADJ]
+		[CVCT_TARGET:two-humped camel]
+		[CVCT_REPLACEMENT:giant two-humped camel]
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immense, long-necked mammal with a thick coat, long legs, a big-lipped, long snout, and two large, fleshy humps on her sturdy back.  She's well suited to living in the savage desert.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immense, long-necked mammal with a thick coat, long legs, a big-lipped, long snout, and two large, fleshy humps on his sturdy back.  He's well suited to living in the savage desert.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:811]
 	[GO_TO_START]
@@ -2912,13 +3096,14 @@ creature_large_tropical
 
 [CREATURE:CROCODILE_SALTWATER]
 	[DESCRIPTION:A huge, predatory reptile found in coastal marshes and river deltas.  It ambushes its prey at the shore and uses its great size to drag the victim under and drown them.]
-	[NAME:saltwater crocodile:saltwater crocodiles:saltwater crocodile]
-	[CASTE_NAME:saltwater crocodile:saltwater crocodiles:saltwater crocodile]
-	[CHILD:3][GENERAL_CHILD_NAME:saltwater crocodile hatchling:saltwater crocodile hatchlings]
+	[NAME:crocodile:crocodiles:crocodile]{:saltwater crocodile:saltwater crocodiles:saltwater crocodile}
+	[CASTE_NAME:crocodile:crocodiles:crocodile]{:saltwater crocodile:saltwater crocodiles:saltwater crocodile}
+	[CHILD:3][GENERAL_CHILD_NAME:crocodile hatchling:crocodile hatchlings]{:saltwater crocodile hatchling:saltwater crocodile hatchlings}
 	[CREATURE_TILE:'C'][COLOR:2:0:0]
 	[PETVALUE:700]
+	[GOBBLE_VERMIN_CLASS:MAMMAL]{+  Revision: too few creatures ate vermin.}
 	[PET_EXOTIC]
-	[MOUNT_EXOTIC]
+	[TRAINABLE_WAR]{MOUNT_EXOTIC    Revision: amphibious mounts are dangerous (bug 926); allowed war training instead.}
 	[AMPHIBIOUS]
 	[BIOME:SWAMP_TROPICAL_FRESHWATER]
 	[BIOME:MARSH_TROPICAL_FRESHWATER]
@@ -2934,6 +3119,7 @@ creature_large_tropical
 	[CARNIVORE][NATURAL]
 	[MEANDERER]
 	[LARGE_PREDATOR]
+	[AMBUSHPREDATOR]{+  Revision: as their description indicates, they prefer to ambush their prey.}
 	[GRASSTRAMPLE:20]
 	[PREFSTRING:strength]
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:NOSE:2LUNGS:HEART:GUTS:ORGANS:GIZZARD:THROAT:NECK:SPINE:BRAIN:SKULL:5TOES_FQ_REG:4TOES_RQ_REG:MOUTH:TONGUE:GENERIC_TEETH:RIBCAGE]
@@ -2978,6 +3164,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:60:100]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -2996,6 +3183,7 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A huge reptile with a broad body, a wide snout, and a thick, powerful tail.  She swims in coastal marshes and rivers, watching for prey to drag underwater.]{+}
 		[LAYS_EGGS]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
@@ -3004,6 +3192,7 @@ creature_large_tropical
 			[CLUTCH_SIZE:20:70]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A huge reptile with a broad body, a wide snout, and a thick, powerful tail.  He swims in coastal marshes and rivers, watching for prey to drag underwater.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SCALE]
 			[TL_COLOR_MODIFIER:GRAY:1]
@@ -3019,9 +3208,11 @@ creature_large_tropical
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:saltwater crocodile man:saltwater crocodile men:saltwater crocodile man]
+		[CASTE_NAME:crocodile man:crocodile men:crocodile man]{:saltwater crocodile man:saltwater crocodile men:saltwater crocodile man}
+		[DESCRIPTION:A tall, naked, scaly man with a wide body and snout and a thick, muscular tail that covers his bum.  He swims and bathes in river and marsh, watching the shore for his next meal.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:saltwater crocodile woman:saltwater crocodile women:saltwater crocodile woman]
+		[CASTE_NAME:crocodile woman:crocodile women:crocodile woman]{:saltwater crocodile woman:saltwater crocodile women:saltwater crocodile woman}
+		[DESCRIPTION:A tall, naked, scaly woman with a wide body and snout and a thick, muscular tail that covers her bum.  She swims and bathes in river and marsh, watching the shore for her next meal.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -3032,7 +3223,7 @@ creature_large_tropical
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:saltwater crocodile man:saltwater crocodile men:saltwater crocodile man]
+	[NAME:crocodile man:crocodile men:crocodile man]{:saltwater crocodile man:saltwater crocodile men:saltwater crocodile man}
 	[DESCRIPTION:A person with the head and tail of a saltwater crocodile.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -3048,12 +3239,16 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immense, predatory reptile with a broad body, a wide snout, and a thick, powerful tail.  Her jaws are frighteningly powerful.  She watches the shore from the water, waiting to drag her next meal into the depths and carve into their flesh with her teeth.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immense, predatory reptile with a broad body, a wide snout, and a thick, powerful tail.  His jaws are frighteningly powerful.  He watches the shore from the water, waiting to drag his next meal into the depths and carve into their flesh with his teeth.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:805]
 	[GO_TO_START]
-	[NAME:giant saltwater crocodile:giant saltwater crocodiles:giant saltwater crocodile]
-	[CASTE_NAME:giant saltwater crocodile:giant saltwater crocodiles:giant saltwater crocodile]
-	[GENERAL_CHILD_NAME:giant saltwater crocodile hatchling:giant saltwater crocodile hatchlings]
+	[NAME:giant crocodile:giant crocodiles:giant crocodile]{:giant saltwater crocodile:giant saltwater crocodiles:giant saltwater crocodile}
+	[CASTE_NAME:giant crocodile:giant crocodiles:giant crocodile]{:giant saltwater crocodile:giant saltwater crocodiles:giant saltwater crocodile}
+	[GENERAL_CHILD_NAME:giant crocodile hatchling:giant crocodile hatchlings]{:giant saltwater crocodile hatchling:giant saltwater crocodile hatchlings}
 	[DESCRIPTION:A huge monster in the shape of a saltwater crocodile.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -3061,7 +3256,7 @@ creature_large_tropical
 	[COLOR:2:0:0]
 	[PET_EXOTIC]
 	[PETVALUE:500]
-	[MOUNT_EXOTIC]
+	[TRAINABLE_WAR]{MOUNT_EXOTIC  Revision: amphibious mounts are dangerous (bug 926); allowed war training instead.}
 	[GO_TO_END]
 	[PREFSTRING:strength]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:1683:1315:947:516:2800:4100] 17 kph
@@ -3153,6 +3348,7 @@ creature_large_tropical
 		[ATTACK_FLAG_BAD_MULTIATTACK]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small bird that flies in warm skies, watching the ground for carrion.  She has a strong beak for tearing flesh and it excretes a mild, flesh-degrading toxin from her featherless head.  Her strong stomach can digest even the most putrid carcasses.]{+}
 		[LAYS_EGGS]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
@@ -3161,6 +3357,7 @@ creature_large_tropical
 			[CLUTCH_SIZE:1:3]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small bird that flies in warm skies, watching the ground for carrion.  He has a strong beak for tearing flesh and it excretes a mild, flesh-degrading toxin from his featherless head.  His strong stomach can digest even the most putrid carcasses.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:FEATHER]
 			[TL_COLOR_MODIFIER:BROWN:1]
@@ -3175,15 +3372,18 @@ creature_large_tropical
 [CREATURE:VULTURE_MAN]
 	[COPY_TAGS_FROM:BIRD_VULTURE]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FEATHER]{+  Revision: the leather is still feathery after tanning.}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:vulture man:vulture men:vulture man]
+		[CASTE_NAME:vulture harp:vulture harps:vulture harp]{:vulture man:vulture men:vulture man}
+		[DESCRIPTION:A small, naked, and feathery man with a strong beak for tearing flesh and a strong stomach for eating it.  His soft feathers are patchy, exposing his featherless head.  He flies with the long, broad wings on his back, watching the ground below.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:vulture woman:vulture women:vulture woman]
+		[CASTE_NAME:vulture harpy:vulture harpies:vulture harpy]{:vulture woman:vulture women:vulture woman}
+		[DESCRIPTION:A small, naked, and feathery woman with a strong beak for tearing flesh and a strong stomach for eating it.  Her soft feathers are patchy, exposing her featherless head.  She flies with the long, broad wings on her back, watching the ground below.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:TALON_SCRATCH_ATTACK]
+	[APPLY_CREATURE_VARIATION:TALON_KICK_ATTACK]{:KICK_ATTACK  Revision: combined the talon scratch and kick attacks.}
+	{APPLY_CREATURE_VARIATION:TALON_SCRATCH_ATTACK}
 	[APPLY_CREATURE_VARIATION:BEAK_BITE_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_FLYING_GAITS:900:691:482:251:1900:2900] 35 kph
@@ -3191,7 +3391,7 @@ creature_large_tropical
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:vulture man:vulture men:vulture man]
+	[NAME:vulture harpy:vulture harpies:vulture harpy]{:vulture man:vulture men:vulture man}
 	[DESCRIPTION:A person with the head and wings of a vulture.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:5:10]
@@ -3204,7 +3404,12 @@ creature_large_tropical
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FEATHER]{+  Revision: the leather is still feathery after tanning.}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, scavenging bird that excretes a mild flesh-degrading toxin from her featherless head.  Her strong stomach can digest the most putrid carcasses; her strong beak tears flesh easily.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, scavenging bird that excretes a mild flesh-degrading toxin from his featherless head.  His strong stomach can digest the most putrid carcasses; his strong beak tears flesh easily.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2927]
 	[GO_TO_START]
@@ -3281,7 +3486,7 @@ creature_large_tropical
 		[ATTACK_VERB:kick:kicks]
 		[ATTACK_CONTACT_PERC:100]
 		[ATTACK_PREPARE_AND_RECOVER:4:4]
-		[ATTACK_PRIORITY:MAIN]
+		[ATTACK_PRIORITY:SECOND]{+  Revision: made kicks less likely.}
 		[ATTACK_FLAG_WITH]
 		[ATTACK_FLAG_BAD_MULTIATTACK]
 	[ATTACK:GORE:BODYPART:BY_CATEGORY:HORN]
@@ -3291,6 +3496,7 @@ creature_large_tropical
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 		[ATTACK_PRIORITY:MAIN]
 		[ATTACK_FLAG_WITH]
+		[ATTACK_VELOCITY_MODIFIER:500]{+  Revision: horn attacks are too deadly, so reduce the velocity.}
 	[DIURNAL]
 	[HOMEOTHERM:10066]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:471:314:157:1900:2900] 56 kph
@@ -3300,8 +3506,10 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:An immense, heavy herbivore with thick, plated skin and thick horns at the end of her snout.  She sleeps through the hottest parts of the day and grazes otherwise, aside from occasional mud baths.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:An immense, heavy herbivore with thick, plated skin and thick horns at the end of his snout.  He sleeps through the hottest parts of the day and grazes otherwise, aside from occasional mud baths.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
@@ -3319,20 +3527,23 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:rhinoceros man:rhinoceros men:rhinoceros man]
+		[DESCRIPTION:A giant, naked, heavy man with thick, plated skin, a large, muscular body, and thick horns at the end of his long nose.  He seems to sleep, lounge, and eat most of the day, apart from the occasional mud bath.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:rhinoceros woman:rhinoceros women:rhinoceros woman]
+		[DESCRIPTION:A giant, naked, heavy woman with thick, plated skin, a large, muscular body, and thick horns at the end of her long nose.  She seems to sleep, lounge, and eat most of the day, apart from the occasional mud bath.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[ATTACK:GORE:BODYPART:BY_CATEGORY:HORN]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:gore:gores]
 		[ATTACK_CONTACT_PERC:100]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-		[ATTACK_PRIORITY:MAIN]
+		[ATTACK_PRIORITY:SECOND]{+        Revision: made biting less likely.}
 		[ATTACK_FLAG_WITH]
+		[ATTACK_VELOCITY_MODIFIER:500]{+  Revision: horn attacks are too deadly, so reduce the velocity.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3356,6 +3567,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:An immeasurable, monstrous herbivore with thick, plated skin, a large, powerful body, and huge horns at the end of her long snout.  She has an insatiable appetite and rarely seems to ever stop eating: she does stop sometimes to enjoy an occasional mud bath.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:An immeasurable, monstrous herbivore with thick, plated skin, a large, powerful body, and huge horns at the end of his long snout.  He has an insatiable appetite and rarely seems to ever stop eating: he does stop sometimes to enjoy an occasional mud bath.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:800]
 	[GO_TO_START]
@@ -3443,13 +3658,15 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A huge, leaf-eating mammal with an extremely long neck.  Her skin has a distinctive brown and white pattern.  She runs in leaps and bounds across savanna and shrubland on long legs.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A huge, leaf-eating mammal with an extremely long neck.  His skin has a distinctive brown and white pattern.  He runs in leaps and bounds across savanna and shrubland on long legs.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:STRIPES_BROWN_WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -3465,13 +3682,15 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:giraffe man:giraffe men:giraffe man]
+		[DESCRIPTION:A towering, naked, furry man of immense height thanks to his extremely long neck and long legs.  He has a long gripping tongue that he habitually sticks out whenever he concentrates.  He has excellent all-round vision thanks to the large eyes on either side of his head.  His soft fur has a distinctive brown and white pattern.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:giraffe woman:giraffe women:giraffe woman]
+		[DESCRIPTION:A towering, naked, furry woman of immense height thanks to her extremely long neck and long legs.  She has a long, gripping tongue that she habitually sticks out whenever she concentrates.  She has excellent all-round vision thanks to the large eyes on either side of her head.  Her soft fur has a distinctive brown and white pattern.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3494,6 +3713,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A giant, leaf-eating mammal with an extremely long neck, long legs, and a distinctive brown and white pattern on her fur.  She's tall enough to tower over almost everything, making it hard for her to eat her meals.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A giant, leaf-eating mammal with an extremely long neck, long legs, and a distinctive brown and white pattern on his fur.  He's tall enough to tower over almost everything, making it hard for him to eat his meals.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:803]
 	[GO_TO_START]
@@ -3567,6 +3790,7 @@ creature_large_tropical
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:15:25]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -3593,11 +3817,13 @@ creature_large_tropical
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, striped mammal that defends herself ferociously in combat, sometimes fighting off animals many times her size.  She has strong claws, a long body, and loose skin that she can twist around in.]{+}
 		[BODY_SIZE:0:0:900]
 		[BODY_SIZE:1:0:4500]
 		[BODY_SIZE:2:0:9000]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, striped mammal that defends himself ferociously in combat, sometimes fighting off animals many times his size.  He has strong claws, a long body, and loose skin that he can twist around in.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 		[BODY_SIZE:0:0:900]
 		[BODY_SIZE:1:0:7000]
@@ -3609,7 +3835,7 @@ creature_large_tropical
 		 [PLUS_TL_GROUP:BY_CATEGORY:HEAD:HAIR]
 		 [PLUS_TL_GROUP:BY_CATEGORY:EAR:HAIR]
 			[TL_COLOR_MODIFIER:WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:LEG_FRONT:HAIR]
 		 [PLUS_TL_GROUP:BY_CATEGORY:LEG_REAR:HAIR]
 		 [PLUS_TL_GROUP:BY_CATEGORY:FOOT_FRONT:HAIR]
@@ -3632,12 +3858,14 @@ creature_large_tropical
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:honey badger man:honey badger men:honey badger man]
+		[DESCRIPTION:A small, naked, furry man with a long body, striped fur, and a wary posture.  He has a broad back, sharp claws, and a short tail.  He can twist freely in his loose skin.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:honey badger woman:honey badger women:honey badger woman]
+		[DESCRIPTION:A small, naked, furry woman with a long body, striped fur, and a wary posture.  She has a broad back, sharp claws, and a short tail.  She can twist freely in her loose skin.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: removed the nail scratch attack.}
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3670,6 +3898,10 @@ creature_large_tropical
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, striped mammal with a long body and a broad back.  Vicious when threatened, she can kill others even larger than herself.  She can twist freely in her loose skin.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, striped mammal with a long body and a broad back.  Vicious when threatened, he can kill others even larger than himself.  He can twist freely in his loose skin.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2135]
 	[GO_TO_START]
@@ -3750,6 +3982,7 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:100:200]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[ATTACK:BITE:BODYPART:BY_CATEGORY:MOUTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -3767,6 +4000,7 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large reptile with a sturdy shell, short legs, and a rigid beak without teeth.  She retreats into her shell to escape predators.]{+}
 		[BODY_SIZE:0:0:80]
 		[BODY_SIZE:2:0:75000]
 		[BODY_SIZE:5:0:150000]
@@ -3778,6 +4012,7 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 			[CLUTCH_SIZE:5:10] 10-25?  large numbers not supported
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large reptile with a sturdy shell, short legs, and a rigid beak without teeth.  He retreats into his shell to escape predators.]{+}
 		[BODY_SIZE:0:0:80]
 		[BODY_SIZE:2:0:150000]
 		[BODY_SIZE:5:0:300000]
@@ -3795,12 +4030,14 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:giant tortoise man:giant tortoise men:giant tortoise man]
+		[DESCRIPTION:A tall, naked, scaly man stooped under a large, protective shell.  He has short, sturdy arms and legs, a short tail, and a rigid beak without teeth.  He swims faster than he walks.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:giant tortoise woman:giant tortoise women:giant tortoise woman]
+		[DESCRIPTION:A tall, naked, scaly woman stooped under a large, protective shell.  She has short, sturdy arms and legs, a short tail, and a rigid beak without teeth.  She swims faster than she walks.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK  Revision: biting's a daft idea.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:750:600:439:1900:2900] 20 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3820,6 +4057,11 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A giant swimming reptile that lumbers slowly on land but swims quickly in the water.  She's protected by an enormous shell that she hides in when threatened.  She has a rigid beak without teeth and short, sturdy legs.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A giant swimming reptile that lumbers slowly on land but swims quickly in the water.  He's protected by an enormous shell that he hides in when threatened.  He has a rigid beak without teeth and short, sturdy legs.]{+}
+	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:826]
 	[GO_TO_START]
 	[NAME:gigantic tortoise:gigantic tortoises:gigantic tortoise]
@@ -3831,7 +4073,7 @@ Giant tortoises were sponsored by the generous contributions of the Bay 12 commu
 	[CREATURE_TILE:'T']
 	[COLOR:6:0:0]
 	[PET_EXOTIC]
-	[MOUNT_EXOTIC]
+	[TRAINABLE_WAR]{MOUNT_EXOTIC  Revision: amphibious mounts are dangerous (bug 926); allowed war training instead.}
 	[PETVALUE:1500]
 	[GO_TO_END]
 	[PREFSTRING:great size]
@@ -3867,7 +4109,7 @@ Armadillos were sponsored by the generous contributions of the Bay 12 community.
 	[BENIGN][MEANDERER][NATURAL]
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:TONGUE:GENERIC_TEETH:RIBCAGE:SHELL]
 	[BODYGLOSS:PAW]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[USE_MATERIAL_TEMPLATE:SHELL:SHELL_TEMPLATE]
 			[STATE_COLOR:ALL:MOTTLED_GRAY_PINK]
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
@@ -3918,15 +4160,17 @@ Armadillos were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE:FEMALE]
 		[CASTE_NAME:armadillo sow:armadillo sows:armadillo sow]
 		[FEMALE]
+		[DESCRIPTION:A small, naturally-armored mammal with a pointy snout, large ears, and a long tail.  She can roll into a ball to escape predators, relying on her leathery, armored hide for defense.  She has a long, sticky tongue useful for eating insects.]{+}
 		[MULTIPLE_LITTER_RARE]
 	[CASTE:MALE]
 		[CASTE_NAME:armadillo boar:armadillo boars:armadillo boar]
 		[MALE]
+		[DESCRIPTION:A small, naturally-armored mammal with a pointy snout, large ears, and a long tail.  He can roll into a ball to escape predators, relying on his leathery, armored hide for defense.  He has a long, sticky tongue useful for eating insects.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 			[TL_COLOR_MODIFIER:MOTTLED_GRAY_PINK:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -3940,12 +4184,14 @@ Armadillos were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:armadillo man:armadillo men:armadillo man]
+		[DESCRIPTION:A small, naked, naturally-armored man with large ears, a pointy snout, and a long tail.  He can roll into a ball to defend himself, relying on his leathery, armored skin for protection.  His long, sticky tongue wraps around his food as he eats, slurps the last drops of his drink, and sometimes sticks cheekily out at people.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:armadillo woman:armadillo women:armadillo woman]
+		[DESCRIPTION:A small, naked, naturally-armored woman with large ears, a pointy snout, and a long tail.  She can roll into a ball to defend herself, relying on her leathery, armored skin for protection.  Her long, sticky tongue wraps around her food as she eats, slurps the last drops of her drink, and sometimes sticks out cheekily at people.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK  Revision: biting's a daft idea.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3965,6 +4211,11 @@ Armadillos were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, naturally armored mammal with large ears, a pointy snout, and a long tail.  She rolls into a ball to protect herself, relying on her thick, leathery, armored hide for defense.  Her long, sticky tongue helps her eat entire colonies of insects.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, naturally armored mammal with large ears, a pointy snout, and a long tail.  He rolls into a ball to protect himself, relying on his thick, leathery, armored hide for defense.  His long, sticky tongue helps him eat entire colonies of insects.]{+}
+	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:3370]
 	[GO_TO_START]
 	[NAME:giant armadillo:giant armadillos:giant armadillo]

@@ -26,7 +26,7 @@ Stoats were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:200]
@@ -85,15 +85,17 @@ Stoats were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, furry critter with a long, low-slung body and a fluffy tail with a black tip.  She hunts rodents and preys on the nests of birds.]{+}
 		[CASTE_NAME:stoat jill:stoat jills:stoat jill]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, furry critter with a long, low-slung body and a fluffy tail with a black tip.  He hunts rodents and preys on the nests of birds.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 		[CASTE_NAME:stoat jack:stoat jacks:stoat jack]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1] black tail tip
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -104,16 +106,19 @@ Stoats were sponsored by the generous contributions of the Bay 12 community.
 [CREATURE:STOAT_MAN]
 	[COPY_TAGS_FROM:STOAT]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:stoat man:stoat men:stoat man]
+		[DESCRIPTION:A small, furry man with the head of a stoat and a fluffy tail with a black tip.  His tall neck and long body make him seem taller than he should be.  He likes being naked; he's comfy in his silky fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:stoat woman:stoat women:stoat woman]
+		[DESCRIPTION:A small, furry woman with the head of a stoat and a fluffy tail with a black tip.  Her tall neck and long body make her seem taller than she should be.  She likes being naked; she's comfy in her silky fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -131,10 +136,16 @@ Stoats were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_STOAT]
 	[COPY_TAGS_FROM:STOAT]
+	[CV_REMOVE_TAG:MAXAGE]{+                            Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, furry beast with a long, low-slung body and a fluffy black-tipped tail that swishes in the cold.  Her small ears flick as she watches for trouble.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, furry beast with a long, low-slung body and a fluffy black-tipped tail that swishes in the cold.  His small ears flick as he watches for trouble.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:57843]
 	[GO_TO_START]
@@ -148,6 +159,8 @@ Stoats were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:5:7]{+      Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:ability to take down large prey]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:657:438:219:1900:2900] 40 kph
@@ -209,6 +222,7 @@ Lynx were sponsored by the generous contributions of the Bay 12 community.
 	[BODY_APPEARANCE_MODIFIER:HEIGHT:90:95:98:100:102:105:110]
 	[BODY_APPEARANCE_MODIFIER:BROADNESS:90:95:98:100:102:105:110]
 	[MAXAGE:10:20]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
 		[ATTACK_VERB:bite:bites]
@@ -237,13 +251,15 @@ Lynx were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized cat with tufted ears and a short tail.  Her fur is warm and thick, and her paws are wide and padded for walking on snow.  She prefers to hunt alone, but sometimes travels and hunts with her pack.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized cat with tufted ears and a short tail.  His fur is warm and thick, and his paws are wide and padded for walking on snow.  He prefers to hunt alone, but sometimes travels and hunts with his pack.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:SPOTS_BROWN_BLACK:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -259,8 +275,10 @@ Lynx were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:lynx man:lynx men:lynx man]
+		[DESCRIPTION:A small, furry man with the head and tufted ears of a lynx.  His short tail barely covers his bum.  He likes being naked and sunbathes despite the cold; his fur is warm and thick, and his feet are wide and padded for walking on snow.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:lynx woman:lynx women:lynx woman]
+		[DESCRIPTION:A small, furry woman with the head and tufted ears of a lynx.  Her short tail barley covers her bum.  She likes being naked and sunbathes despite the cold; her fur is warm and thick, and her feet are wide and padded for walking on snow.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -287,6 +305,10 @@ Lynx were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, monstrous cat with thick fur and tufted ears that ruffle with the wind.  Her fluffy tail flicks with her mood and swishes as she walks.  Her paws are wide and padded for walking on snow: she's quiet despite her size.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, monstrous cat with thick fur and tufted ears that ruffle with the wind.  His fluffy tail flicks with his mood and swishes as he walks.  His paws are large and padded for walking on snow: he's quiet despite his size.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1511]
 	[GO_TO_START]
@@ -301,6 +323,7 @@ Lynx were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:ear tufts]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:657:438:219:1900:2900] 40 kph
