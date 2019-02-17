@@ -99,16 +99,18 @@ Wild boars were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A large, stocky beast with short legs, shaggy fur, and upward-curving tusks.  She has strong neck muscles to dig for food, using her long snout as a plow.]{+}
 		[MULTIPLE_LITTER_RARE]
 		[CASTE_NAME:wild boar sow:wild boar sows:wild boar sow]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A large, stocky beast with short legs, shaggy fur, and upward-curving tusks.  He has strong neck muscles to dig for food, using his long snout as a plow.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 		[CASTE_NAME:wild boar:wild boars:wild boar]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -122,13 +124,15 @@ Wild boars were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:wild boar man:wild boar men:wild boar man]
+		[DESCRIPTION:A midsized, furry man with a long, flat snout, tall ears, and sharp tusks that protrude from the sides of his wide mouth.  His thin, tufted tail swishes as he moves.  He likes being naked; he's comfy in his shaggy fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:wild boar woman:wild boar women:wild boar woman]
+		[DESCRIPTION:A midsized, furry woman with a long, flat snout, tall ears, and sharp tusks that protrude from the sides of her wide mouth.  Her thin, tufted tail swishes as she moves.  She likes being naked; she's comfy in her shaggy fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:HOOF_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:TUSK_STAB_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -153,6 +157,10 @@ Wild boars were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A huge, stocky, tusked beast that forages and digs for food with strong neck muscles, using her head as a plow.  She charges toward her victim with a fiery temper.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A huge, stocky, tusked beast that forages and digs for food with strong neck muscles, using his head as a plow.  He charges toward his victim with a fiery temper.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:979]
 	[GO_TO_START]
@@ -264,13 +272,15 @@ Coyotes were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, slender canine with a sly and predatory nature.  She eats almost anything and is quick to adapt to change.  Groups can be heard howling in the night.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, slender canine with a sly and predatory nature.  He eats almost anything and is quick to adapt to change.  Groups can be heard howling in the night.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:MOTTLED_GRAY_BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -286,12 +296,14 @@ Coyotes were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:coyote man:coyote men:coyote man]
+		[DESCRIPTION:A small, furry man with tall ears, a slender snout, and an echoing howl.  His shaggy tail wags about with his mood.  He likes being naked; he's comfy in his warm fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:coyote woman:coyote women:coyote woman]
+		[DESCRIPTION:A small, furry woman with tall ears, a slender snout, and an echoing howl.  Her shaggy tail wags about with her mood.  She likes being naked; she's comfy in her warm fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: scratching's a daft idea.}
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -314,6 +326,10 @@ Coyotes were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, slender canine predator with a haunting howl and a cunning nature.  She's quick to adapt to change and will eat almost anything.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, slender canine predator with a haunting howl and a cunning nature.  He's quick to adapt to change and will eat almost anything.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2040]
 	[GO_TO_START]
@@ -328,6 +344,8 @@ Coyotes were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[TRAINABLE]{+       Revision: now they're trainable for war and hunting.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:howling]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:411:274:137:1900:2900] 64 kph
@@ -401,7 +419,7 @@ Kangaroos were sponsored by the generous contributions of the Bay 12 community.
 		[ATTACK_PREPARE_AND_RECOVER:4:4]
 		[ATTACK_PRIORITY:MAIN]
 		[ATTACK_FLAG_WITH]
-		[ATTACK_VELOCITY_MODIFIER:3000]
+		[ATTACK_VELOCITY_MODIFIER:1500]{+  Revision: unarmed combat was too deadly.}
 		[ATTACK_FLAG_BAD_MULTIATTACK]
 	[ATTACK:BITE:CHILD_BODYPART_GROUP:BY_CATEGORY:HEAD:BY_CATEGORY:TOOTH]
 		[ATTACK_SKILL:BITE]
@@ -424,6 +442,7 @@ Kangaroos were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE:FEMALE]
 		[CASTE_NAME:kangaroo doe:kangaroo does:kangaroo doe]
 		[FEMALE]
+		[DESCRIPTION:A large, long-eared marsupial that hops as she moves and can travel long distances.  She jumps with the help of her long, muscular tail, strong legs, and large feet.  She's well suited to live in harsh, dry places.]{+}
 		[MULTIPLE_LITTER_RARE]
 		[USE_MATERIAL_TEMPLATE:MILK:MILK_TEMPLATE]
 			[STATE_NAME:ALL_SOLID:frozen kangaroo's milk]
@@ -447,11 +466,12 @@ Kangaroos were sponsored by the generous contributions of the Bay 12 community.
 	[CASTE:MALE]
 		[CASTE_NAME:kangaroo buck:kangaroo bucks:kangaroo buck]
 		[MALE]
+		[DESCRIPTION:A large, long-eared marsupial that hops as he moves and can travel long distances.  He jumps with the help of his long, muscular tail, strong legs, and large feet.  He's well suited to live in harsh, dry places.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1] could be better
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 			[TLCM_NOUN:skin:SINGULAR]
@@ -465,12 +485,14 @@ Kangaroos were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:kangaroo man:kangaroo men:kangaroo man]
+		[DESCRIPTION:A midsized, furry man with tall ears, strong legs, and a thick, powerful tail that waves about carelessly.  He seems to hop and skip as he walks.  He likes being naked; he's comfy in his warm fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:kangaroo woman:kangaroo women:kangaroo woman]
+		[DESCRIPTION:A midsized, furry woman with tall ears, strong legs, and a thick, powerful tail that waves about carelessly.  She seems to hop and skip as she walks.  She has a pouch on her stomach for carrying a little one.  She likes being naked; she's comfy in her warm fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_HIGHVEL_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK  Revision: biting's a daft idea.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -486,10 +508,22 @@ Kangaroos were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_KANGAROO]
 	[COPY_TAGS_FROM:KANGAROO]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_NAME]
+		[CVCT_TARGET:kangaroo]
+		[CVCT_REPLACEMENT:giant kangaroo]
+	[CV_CONVERT_TAG]{+  Revision: fix for bug 5105: products from some creatures listed multiple times in stockpile menu.}
+		[CVCT_MASTER:STATE_ADJ]
+		[CVCT_TARGET:kangaroo]
+		[CVCT_REPLACEMENT:giant kangaroo]
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A huge, long-eared marsupial that jumps great distances and hops as she looks for food and water.  She has long ears, a long, muscular tail, strong legs, and large feet.  She's well suited to live in harsh, dry places.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A huge, long-eared marsupial that jumps great distances and hops as he looks for food and water.  He has long ears, a long, muscular tail, strong legs, and large feet.  He's well suited to live in harsh, dry places.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:953]
 	[GO_TO_START]
@@ -596,13 +630,15 @@ Koalas were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, tree-dwelling marsupial with a large black nose, floppy ears, and a stout, tailless body.  She spends her time sleeping.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, tree-dwelling marsupial with a large black nose, floppy ears, and a stout, tailless body.  He spends his time sleeping.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -616,13 +652,15 @@ Koalas were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:koala man:koala men:koala man]
+		[DESCRIPTION:A small, furry man with a large black nose, floppy ears, and a stout, tailless body.  His wide eyes make him seem inquisitive, even when he's trying not to be.  He likes being naked; he's comfy in his soft fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:koala woman:koala women:koala woman]
+		[DESCRIPTION:A small, furry woman with a large black nose, floppy ears, and a stout, tailless body.  Her wide eyes make her seem inquisitive, even when she's trying not to be.  She has a pouch on her stomach for carrying a little one.  She likes being naked; she's comfy in her soft fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -644,12 +682,16 @@ Koalas were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, tree-dwelling marsupial with a large black nose, round ears, and a stout, tailless body.  She spends her time sleeping.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, tree-dwelling marsupial with a large black nose, round ears, and a stout, tailless body.  He spends his time sleeping.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2705]
 	[GO_TO_START]
 	[NAME:giant koala:giant koalas:giant koala]
 	[CASTE_NAME:giant koala:giant koalas:giant koala]
-	GENERAL_CHILD_NAME:giant koala joey:giant koala joeys]
+	[GENERAL_CHILD_NAME:giant koala joey:giant koala joeys]{+  Revision: added missing left bracket.}
 	[DESCRIPTION:A large koala-shaped monster.]
 	[POPULATION_NUMBER:15:30]
 	[CREATURE_TILE:'K']
@@ -672,9 +714,11 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 	[DESCRIPTION:A tiny snake with ridged scales and a powerful venomous bite.]
 	[NAME:adder:adders:adder]
 	[CASTE_NAME:adder:adders:adder]
+	[CHILD:1][GENERAL_CHILD_NAME:adder hatchling:adder hatchlings]{+  Revision: taming requires a child tag (bug 7983).}
 	[CREATURE_TILE:'a'][COLOR:6:0:0]
 	[CREATURE_CLASS:POISONOUS]
 	[PETVALUE:50]
+	[GOBBLE_VERMIN_CLASS:MAMMAL]{+  Revision: too few creatures ate vermin.}
 	[PET_EXOTIC]
 	[FREQUENCY:30]
 	[NATURAL]
@@ -759,6 +803,7 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny snake with ridged, patterned scales and a venomous bite.  Quiet and passive, she spends her time sleeping.]{+}
 		[LAYS_EGGS]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
@@ -767,6 +812,7 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 			[CLUTCH_SIZE:3:10] 3 to 20
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny snake with ridged, patterned scales and a venomous bite.  Quiet and passive, he spends his time sleeping.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SCALE]
 			[TL_COLOR_MODIFIER:MOTTLED_TAN_DARK_BROWN:1]
@@ -797,11 +843,14 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 		[CVCT_REPLACEMENT:ADDER_MAN]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:adder man:adder men:adder man]
+		[CASTE_NAME:adder naga:adder nagas:adder naga]{:adder man:adder men:adder man}
+		[DESCRIPTION:A small, scaly man with the head of an adder on a long, curved neck.  Zig-zag patterns wind down his limbs and back, and freckles and spots fleck his snout down to his hips.  His thighs merge into a tail; he coils or draws himself up as needed.  He likes being naked; he sunbathes in just his patterned scales.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:adder woman:adder women:adder woman]
+		[CASTE_NAME:adder nagi:adder nagis:adder nagi]{:adder woman:adder women:adder woman}
+		[DESCRIPTION:A small, scaly woman with the head of an adder on a long, curved neck.  Zig-zag patterns wind down her limbs and back, and freckles and spots fleck her snout down to her hips.  Her thighs merge into a tail; she coils and draws herself up as needed.  She likes being naked; she sunbathes in just her patterned scales.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_VENOM_ATTACK]
@@ -810,7 +859,7 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:adder man:adder men:adder man]
+	[NAME:adder naga:adder nagas:adder naga]{:adder man:adder men:adder man}
 	[DESCRIPTION:A large adder with the torso and arms of a man.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:5]
@@ -840,12 +889,18 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, long, venomous snake with ridged, patterned scales.  She keeps to herself when she's not hungry.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, long, venomous snake with ridged, patterned scales.  He keeps to himself when he's not hungry.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:134033]
 	[GO_TO_START]
 	[NAME:giant adder:giant adders:giant adder]
 	[CASTE_NAME:giant adder:giant adders:giant adder]
+	[GENERAL_CHILD_NAME:giant adder hatchling:giant adder hatchlings]{+}
 	[DESCRIPTION:A large monster in the form of an adder.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -854,6 +909,7 @@ Adders were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR][AMBUSHPREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:warning hisses]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:900:750:600:439:1900:2900] 20 kph
@@ -946,6 +1002,7 @@ Echidnas were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, spiny, egg-laying mammal with a long snout.  She digs for ants and termites with her short, strong arms and large claws.]{+}
 		[LAYS_EGGS]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
@@ -954,11 +1011,12 @@ Echidnas were sponsored by the generous contributions of the Bay 12 community.
 			[CLUTCH_SIZE:1:1]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, spiny, egg-laying mammal with a long snout.  He digs for ants and termites with his short, strong arms and large claws.]{+}
 		undescended, not geldable
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -972,12 +1030,14 @@ Echidnas were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:echidna man:echidna men:echidna man]
+		[DESCRIPTION:A small, furry man with small eyes, large claws, and a long, slender snout.  Spines cover his broad back, short, strong arms, neck, and bum; the spines on his head look like unkempt, spiky hair.  His ears are slits hidden beneath his spines.  He likes being naked; he's comfy in his coarse fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:echidna woman:echidna women:echidna woman]
+		[DESCRIPTION:A small, furry woman with small eyes, large claws, and a long, slender snout.  Spines cover her broad back, short, strong arms, neck, and bum; the spines on her head look like unkempt, spiky hair.  Her ears are slits hidden beneath her spines.  She likes being naked; she's comfy in her coarse fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: scratching is daft idea.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -999,6 +1059,10 @@ Echidnas were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, egg-laying mammal with a tough body covered in spines and coarse fur.  She digs with strong, short arms and large claws.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, egg-laying mammal with a tough body covered in spines and coarse fur.  He digs with strong, short arms and large claws.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2705]
 	[GO_TO_START]
@@ -1012,7 +1076,7 @@ Echidnas were sponsored by the generous contributions of the Bay 12 community.
 	[COLOR:6:0:0]
 	[PET_EXOTIC]
 	[PETVALUE:500]
-	[MOUNT_EXOTIC]
+	[TRAINABLE_WAR]{MOUNT_EXOTIC  Revision: mounts that curl up are dangerous; allowed war training instead.}
 	[GO_TO_END]
 	[PREFSTRING:spines]
 	[PREFSTRING:egg-laying]
@@ -1050,7 +1114,7 @@ Porcupines were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:RODENT_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[USE_MATERIAL_TEMPLATE:SPINE:NAIL_TEMPLATE]
 			[STATE_NAME:ALL_SOLID:spine]
 			[STATE_ADJ:ALL_SOLID:spine]
@@ -1114,13 +1178,15 @@ Porcupines were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small rodent covered with long, sharp quills.  She eats grass and leaves and sometimes climbs trees.  She runs backward when threatened, waving her spiny tail about and attacking with her quills.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small rodent covered with long, sharp quills.  He eats grass and leaves and sometimes climbs trees.  He runs backward when threatened, waving his spiny tail about and attacking with his quills.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1134,13 +1200,15 @@ Porcupines were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:porcupine man:porcupine men:porcupine man]
+		[DESCRIPTION:A small, furry man with small eyes and a spiny tail that swishes as he moves.  The spines cover his broad back, arms, legs, neck, and bum; the quills on his head look like shaggy, spiky hair.  He likes being naked; he's comfy in his soft fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:porcupine woman:porcupine women:porcupine woman]
+		[DESCRIPTION:A small, furry woman with small eyes and a spiny tail that swishes as she moves.  The spines cover her broad back, arms, legs, neck, and bum; the quills on her head look like shaggy, spiky hair.  She likes being naked; she's comfy in her soft fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -1162,6 +1230,10 @@ Porcupines were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large rodent with long, sharp quills.  She menaces with deadly spines big enough to deter most threats.  She mostly keeps to herself, grazing on grass and leaves.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large rodent with long, sharp quills.  He menaces with deadly spines big enough to deter most threats.  He mostly keeps to himself, grazing on grass and leaves.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2927]
 	[GO_TO_START]
@@ -1175,7 +1247,7 @@ Porcupines were sponsored by the generous contributions of the Bay 12 community.
 	[COLOR:6:0:0]
 	[PET_EXOTIC]
 	[PETVALUE:500]
-	[MOUNT_EXOTIC]
+	[TRAINABLE_WAR]{MOUNT_EXOTIC  Revision: mounts that curl up are dangerous; allowed war training instead.}
 	[GO_TO_END]
 	[PREFSTRING:quills]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:549:366:183:1900:2900] 48 kph
@@ -1191,8 +1263,10 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 	[DESCRIPTION:A small, brightly-colored snake.  It is known for eating other snakes and being mistaken for its venomous cousins.]
 	[NAME:kingsnake:kingsnakes:kingsnake]
 	[CASTE_NAME:kingsnake:kingsnakes:kingsnake]
+	[CHILD:2][GENERAL_CHILD_NAME:kingsnake hatchling:kingsnake hatchlings]{+  Revision: taming requires a child tag (bug 7983).}
 	[CREATURE_TILE:'k'][COLOR:7:0:1]
 	[PETVALUE:50]
+	[GOBBLE_VERMIN_CLASS:MAMMAL]{+  Revision: too few creatures ate vermin.}
 	[PET_EXOTIC]
 	[FREQUENCY:40]
 	[NATURAL]
@@ -1258,6 +1332,7 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 	[CANNOT_JUMP]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, colorful, banded snake that eats other snakes.  She looks like she should be poisonous, so is usually left alone.]{+}
 		[LAYS_EGGS]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGGSHELL:SOLID]
 			[EGG_MATERIAL:LOCAL_CREATURE_MAT:EGG_WHITE:LIQUID]
@@ -1266,6 +1341,7 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 			[CLUTCH_SIZE:5:12]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, colorful, banded snake that eats other snakes.  He looks like he should be poisonous, so is usually left alone.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SCALE]
 			[TL_COLOR_MODIFIER:STRIPES_BLACK_WHITE:1]
@@ -1277,11 +1353,14 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 [CREATURE:KINGSNAKE_MAN]
 	[COPY_TAGS_FROM:KINGSNAKE]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:kingsnake man:kingsnake men:kingsnake man]
+		[CASTE_NAME:kingsnake naga:kingsnake nagas:kingsnake naga]{:kingsnake man:kingsnake men:kingsnake man}
+		[DESCRIPTION:A small, scaly man with the head of a kingsnake on a tall neck.  Colorful, banded patterns wind around his lithe body in strange patterns.  His thighs merge into a tail; he coils or draws himself up as needed.  He likes being naked; he sunbathes in just his glossy scales.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:kingsnake woman:kingsnake women:kingsnake woman]
+		[CASTE_NAME:kingsnake nagi:kingsnake nagis:kingsnake nagi]{:kingsnake woman:kingsnake women:kingsnake woman}
+		[DESCRIPTION:A small, scaly woman with the head of a kingsnake on a tall neck.  Colorful, banded patterns wind around her lithe body in strange patterns.  Her thighs merge into a tail; she coils and draws herself up as needed.  She likes being naked; she sunbathes in just her glossy scales.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
@@ -1290,7 +1369,7 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:kingsnake man:kingsnake men:kingsnake man]
+	[NAME:kingsnake naga:kingsnake nagas:kingsnake naga]{:kingsnake man:kingsnake men:kingsnake man}
 	[DESCRIPTION:A legless person with the head and tail of a kingsnake.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -1303,12 +1382,18 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, poisonous looking, snake-eating snake with banded and brightly-colored scales.  She wraps herself around her prey and crushes them, then devours them whole.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, poisonous looking, snake-eating snake with banded and brightly-colored scales.  He wraps himself around his prey and crushes them, then devours them whole.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:14034]
 	[GO_TO_START]
 	[NAME:giant kingsnake:giant kingsnakes:giant kingsnake]
 	[CASTE_NAME:giant kingsnake:giant kingsnakes:giant kingsnake]
+	[GENERAL_CHILD_NAME:giant kingsnake hatchling:giant kingsnake hatchlings]{+}
 	[DESCRIPTION:A large monster in the form of a kingsnake.]
 	[POPULATION_NUMBER:10:25]
 	[CLUSTER_NUMBER:1:1]
@@ -1317,6 +1402,7 @@ Kingsnakes were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:habit of eating other snakes]
 	[PREFSTRING:coloration]
@@ -1330,8 +1416,8 @@ Gray langurs were sponsored by the generous contributions of the Bay 12 communit
 
 [CREATURE:GRAY_LANGUR]
 	[DESCRIPTION:A small monkey that can be found in forests and the streets of towns.]
-	[NAME:gray langur:gray langurs:gray langur]
-	[CASTE_NAME:gray langur:gray langurs:gray langur]
+	[NAME:langur:langurs:langur]{:gray langur:gray langurs:gray langur}
+	[CASTE_NAME:langur:langurs:langur]{:gray langur:gray langurs:gray langur}
 	[CREATURE_TILE:'l'][COLOR:7:0:0]
 	[CREATURE_CLASS:MAMMAL]
 	[NATURAL]
@@ -1411,13 +1497,15 @@ Gray langurs were sponsored by the generous contributions of the Bay 12 communit
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized monkey that lives in the streets of towns as often as she lives elsewhere.  She has a long tail and shaggy hair around her hairless face.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized monkey that lives in the streets of towns as often as he lives elsewhere.  He has a long tail and shaggy hair around his hairless face.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1430,20 +1518,22 @@ Gray langurs were sponsored by the generous contributions of the Bay 12 communit
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:gray langur man:gray langur men:gray langur man]
+		[CASTE_NAME:langur man:langur men:langur man]{:gray langur man:gray langur men:gray langur man}
+		[DESCRIPTION:A small, furry man with slender, lithe limbs that make him look scrawny.  His fur is soft and patchy; his face is hairless.  He often walks on all fours, his long, flexible tail waving about in the air.  He likes being naked; he's comfy in his shaggy fur.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:gray langur woman:gray langur women:gray langur woman]
+		[CASTE_NAME:langur woman:langur women:langur woman]{:gray langur woman:gray langur women:gray langur woman}
+		[DESCRIPTION:A small, furry woman with slender, lithe limbs that make her look scrawny.  Her fur is soft and patchy; her face is hairless.  She often walks on all fours, her long, flexible tail waving about in the air.  She likes being naked; she's comfy in her shaggy fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:gray langur man:gray langur men:gray langur man]
+	[NAME:langur man:langur men:langur man]{:gray langur man:gray langur men:gray langur man}
 	[DESCRIPTION:A grey person with the head and tail of a gray langur.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:5:10]
@@ -1459,11 +1549,15 @@ Gray langurs were sponsored by the generous contributions of the Bay 12 communit
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, long-haired monkey with a long tail and shaggy fur around her hairless face.  Curious and social, she sometimes lives in towns, scavenging and stealing what she can.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, long-haired monkey with a long tail and shaggy fur around his hairless face.  Curious and social, he sometimes lives in towns, scavenging and stealing what he can.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:2040]
 	[GO_TO_START]
-	[NAME:giant gray langur:giant gray langurs:giant gray langur]
-	[CASTE_NAME:giant gray langur:giant gray langurs:giant gray langur]
+	[NAME:giant langur:giant langurs:giant langur]{:giant gray langur:giant gray langurs:giant gray langur}
+	[CASTE_NAME:giant langur:giant langurs:giant langur]{:giant gray langur:giant gray langurs:giant gray langur}
 	[DESCRIPTION:A huge monster in the shape of a gray langur.]
 	[POPULATION_NUMBER:20:50]
 	[CLUSTER_NUMBER:5:10]
@@ -1511,7 +1605,7 @@ Bobcats were sponsored by the generous contributions of the Bay 12 community.
 	[PREFSTRING:short tails]
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:5TOES_FQ_REG:4TOES_RQ_REG:MOUTH:GENERIC_TEETH_WITH_LARGE_EYE_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 	[BODY_DETAIL_PLAN:VERTEBRATE_TISSUE_LAYERS:SKIN:FAT:MUSCLE:BONE:CARTILAGE]
 	[BODY_DETAIL_PLAN:BODY_HAIR_TISSUE_LAYERS:HAIR]
@@ -1567,13 +1661,15 @@ Bobcats were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small predatory cat with a short tail, a spotted coat, and large, black-tipped ears.  She has a ruff of fur on the sides of her face.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small predatory cat with a short tail, a spotted coat, and large, black-tipped ears.  He has a ruff of fur on the sides of his face.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:SPOTS_ORANGE_BLACK:990:BLACK:10:WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1586,11 +1682,14 @@ Bobcats were sponsored by the generous contributions of the Bay 12 community.
 [CREATURE:BOBCAT_MAN]
 	[COPY_TAGS_FROM:BOBCAT]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:bobcat man:bobcat men:bobcat man]
+		[DESCRIPTION:A small, furry man, lithe and flexible, with large, black-tipped ears and tufted cheeks that make his face look wide.  His short tail flicks about and is barely long enough to cover his bum.  He likes being naked; he sunbathes in just his spotted fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:bobcat woman:bobcat women:bobcat woman]
+		[DESCRIPTION:A small, furry woman, lithe and flexible, with large, black-tipped ears and tufted cheeks that make her face look wide.  Her short tail flicks about and is barely long enough to cover her bum.  She likes being naked, she sunbathes in just her spotted fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
@@ -1616,7 +1715,12 @@ Bobcats were sponsored by the generous contributions of the Bay 12 community.
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, spotted, predatory cat with a short, bobbed tail, a long cheek ruff, and large, black-tipped ears.  She stalks her prey, creeping forward before pouncing.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, spotted, predatory cat with a short, bobbed tail, a long cheek ruff, and large, black-tipped ears.  He stalks his prey, creeping forward before pouncing.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:3204]
 	[GO_TO_START]
@@ -1631,6 +1735,8 @@ Bobcats were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[TRAINABLE]{+       Revision: now they're trainable for war and hunting.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:short tails]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:699:497:266:1900:2900] 33 kph
@@ -1655,6 +1761,7 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[BIOME:SAVANNA_TEMPERATE]
 	[BIOME:GRASSLAND_TEMPERATE]
 	[LARGE_ROAMING]
+	[HUNTS_VERMIN]{+  Revision: skunks hunt small creatures.}
 	[POPULATION_NUMBER:15:30]
 	[CLUSTER_NUMBER:1:1]
 	[BENIGN][MEANDERER]
@@ -1663,7 +1770,7 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:RODENT_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:200]
@@ -1722,13 +1829,15 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small black and white mammal with a long body and a bushy tail.  She can spray a stinking fluid and is best left alone.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small black and white mammal with a long body and a bushy tail.  He can spray a stinking fluid and is best left alone.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:STRIPES_BLACK_WHITE:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -1742,13 +1851,15 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:skunk man:skunk men:skunk man]
+		[DESCRIPTION:A small, furry man with small ears and a broad, pointy snout.  Long stripes run from his head down his back and sides, detouring around his chest before joining at the tip of his bushy tail.  He smells unpleasant when startled.  He likes being naked; he's comfy in his long fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:skunk woman:skunk women:skunk woman]
+		[DESCRIPTION:A small, furry woman with small ears and a broad, pointy snout.  Long stripes run from her head down her back and sides, detouring around her chest before joining at the tip of her bushy tail.  She smells unpleasant when startled.  She likes being naked; she's comfy in her long fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -1770,6 +1881,10 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, black and white mammal with a long body and a bushy tail.  She's feared for the strong, stinking fluid she can spray.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, black and white mammal with a long body and a bushy tail.  He's feared for the strong, stinking fluid he can spray.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:5701]
 	[GO_TO_START]
@@ -1784,6 +1899,7 @@ Skunks were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:distinctive striping]
 	[PREFSTRING:foul smell]
@@ -1795,8 +1911,8 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 
 [CREATURE:GREEN_TREE_FROG]
 	[DESCRIPTION:A tiny amphibian that lives in the trees.]
-	[NAME:green tree frog:green tree frogs:green tree frog]
-	[CASTE_NAME:green tree frog:green tree frogs:green tree frog]
+	[NAME:frog:frogs:frog]{:green tree frog:green tree frogs:green tree frog}
+	[CASTE_NAME:frog:frogs:frog]{:green tree frog:green tree frogs:green tree frog}
 	[CREATURE_TILE:249][COLOR:2:0:1]
 	[PETVALUE:10]
 	[VERMIN_GROUNDER][FREQUENCY:100]
@@ -1810,7 +1926,7 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 	[POPULATION_NUMBER:250:500]
 	[PREFSTRING:distinct mating call]
 	[BODY:QUADRUPED_NECK:2EYES:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:MOUTH:RIBCAGE]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 		[REMOVE_MATERIAL:HAIR]
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[REMOVE_TISSUE:HAIR]
@@ -1853,8 +1969,10 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, easily frightened amphibian with a loud croak.  She makes for a strange yet easily cared for pet.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, easily frightened amphibian with a loud croak.  He makes for a strange yet easily cared for pet.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 			[TL_COLOR_MODIFIER:GREEN:1]
@@ -1868,19 +1986,21 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:green tree frog man:green tree frog men:green tree frog man]
+		[CASTE_NAME:frog man:frog men:frog man]{:green tree frog man:green tree frog men:green tree frog man}
+		[DESCRIPTION:A small, squatting man with a thin, broad head, a long tongue, and large, glassy eyes.  His thick neck almost disappears into his wide shoulders.  His neck, chest, and stomach are a creamy color that accents his vibrant, glossy green.  He likes being naked: he doesn't understand why he would swim in clothing.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:green tree frog woman:green tree frog women:green tree frog woman]
+		[CASTE_NAME:frog woman:frog women:frog woman]{:green tree frog woman:green tree frog women:green tree frog woman}
+		[DESCRIPTION:A small, squatting woman with a thin, broad head, a long tongue, and large, glassy eyes.  Her thick neck almost disappears into her wide shoulders.  Her neck, chest, and stomach are a creamy color that accents her vibrant, glossy green.  She likes being naked: she doesn't understand why she would swim in clothing.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:MOUTH_BITE_ATTACK  Revision: biting's a daft idea.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:green tree frog man:green tree frog men:green tree frog man]
+	[NAME:frog man:frog men:frog man]{:green tree frog man:green tree frog men:green tree frog man}
 	[DESCRIPTION:A green person with the head of a green tree frog.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:5]
@@ -1890,15 +2010,20 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 
 [CREATURE:GIANT_GREEN_TREE_FROG]
 	[COPY_TAGS_FROM:GREEN_TREE_FROG]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large amphibian with large, glassy eyes and squat legs.  Her loud croaking can be heard from far away.  She's shy and easily frightened, despite her size.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large amphibian with large, glassy eyes and squat legs.  His loud croaking can be heard from far away.  He's shy and easily frightened, despite his size.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:200700]
 	[GO_TO_START]
-	[NAME:giant green tree frog:giant green tree frogs:giant green tree frog]
-	[CASTE_NAME:giant green tree frog:giant green tree frogs:giant green tree frog]
+	[NAME:giant frog:giant frogs:giant frog]{:giant green tree frog:giant green tree frogs:giant green tree frog}
+	[CASTE_NAME:giant frog:giant frogs:giant frog]{:giant green tree frog:giant green tree frogs:giant green tree frog}
 	[DESCRIPTION:A large monster in the shape of a green tree frog.]
 	[POPULATION_NUMBER:10:20]
 	[CLUSTER_NUMBER:1:1]
@@ -1906,6 +2031,10 @@ Green tree frogs were sponsored by the generous contributions of the Bay 12 comm
 	[COLOR:2:0:1]
 	[PET_EXOTIC]
 	[PETVALUE:500]
+	[MAXAGE:6:10]{+                            Revision: let them live long enough to be worth taming.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_GROUND_BUG]{+  Revision: too few creatures ate vermin.}
+	[GOBBLE_VERMIN_CLASS:EDIBLE_FLYING_BUG]{+  Revision: too few creatures ate vermin.}
+	[LARGE_PREDATOR]{+                         Revision: best be cautious.}
 	[MOUNT_EXOTIC]
 	[GO_TO_END]
 	[PREFSTRING:distinct mating call]
@@ -1940,7 +2069,7 @@ Hares were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:RODENT_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:200]
@@ -2000,15 +2129,17 @@ Hares were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, swift, long-eared mammal with long legs and a short, fluffy tail.  She hops as she moves, skipping as she runs away.]{+}
 		[CASTE_NAME:doe hare:doe hares:doe hare]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, swift, long-eared mammal with long legs and a short, fluffy tail.  He hops as he moves, skipping as he runs away.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 		[CASTE_NAME:buck hare:buck hares:buck hare]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2022,13 +2153,15 @@ Hares were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:hare man:hare men:hare man]
+		[DESCRIPTION:A small, furry man with long, floppy ears, a lanky build, and a fluffy, perky tail that sticks upward.  He often looks like he's squatting; his legs are just long and naturally bent, giving him a loping, bouncing stride.  He likes being naked; he's comfy in his warm fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:hare woman:hare women:hare woman]
+		[DESCRIPTION:A small, furry woman with long, floppy ears, a lanky build, and a fluffy, perky tail that sticks upward.  She often looks like she's squatting; her legs are just long and naturally bent, giving her a loping, bouncing stride.  She likes being naked; she's comfy in her warm fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:585:390:195:1900:2900] 45 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2050,6 +2183,10 @@ Hares were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, lanky herbivore with long ears and a short, fluffy tail.  He runs swiftly on long legs, jumping as he runs.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, lanky herbivore with long ears and a short, fluffy tail.  She runs swiftly on long legs, jumping as she runs.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:6416]
 	[GO_TO_START]
@@ -2077,9 +2214,11 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 	[DESCRIPTION:A small reptile with a tell-tale rattle and vicious bite that leads to a quick death.]
 	[NAME:rattlesnake:rattlesnakes:rattlesnake]
 	[CASTE_NAME:rattlesnake:rattlesnakes:rattlesnake]
+	[CHILD:3][GENERAL_CHILD_NAME:rattlesnake snakelet:rattlesnake snakelets]{+  Revision: taming requires a child tag (bug 7983).}
 	[CREATURE_TILE:'s'][COLOR:7:0:0]
 	[CREATURE_CLASS:POISONOUS]
 	[PETVALUE:20]
+	[GOBBLE_VERMIN_CLASS:MAMMAL]{+  Revision: too few creatures ate vermin.}
 	[PET_EXOTIC]
 	[FREQUENCY:50]
 	[NATURAL]
@@ -2163,8 +2302,10 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 	[CANNOT_JUMP]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small reptile with a tell-tale rattle, patterned scales, and a deadly, venomous bite.  Shy and timid, she bites only when provoked.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small reptile with a tell-tale rattle, patterned scales, and a deadly, venomous bite.  Shy and timid, he bites only when provoked.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SCALE]
 			[TL_COLOR_MODIFIER:STRIPES_BROWN_WHITE:1]
@@ -2195,11 +2336,14 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 		[CVCT_REPLACEMENT:RATTLESNAKE_MAN]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:rattlesnake man:rattlesnake men:rattlesnake man]
+		[CASTE_NAME:rattlesnake naga:rattlesnake nagas:rattlesnake naga]{:rattlesnake man:rattlesnake men:rattlesnake man}
+		[DESCRIPTION:A small, scaly man with a venomous bite and the head of a rattlesnake on a tall neck.  His thighs merge into a tail; capped with a distinctive rattle, it makes noise with his mood.  He likes being naked; he sunbathes in just his patterned scales.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:rattlesnake woman:rattlesnake women:rattlesnake woman]
+		[CASTE_NAME:rattlesnake nagi:rattlesnake nagis:rattlesnake nagi]{:rattlesnake woman:rattlesnake women:rattlesnake woman}
+		[DESCRIPTION:A small, scaly woman with a venomous bite and the head of a rattlesnake on a tall neck.  Her thighs merge into a tail; capped with a distinctive rattle, it makes noise with her mood.  She likes being naked; she sunbathes in just her patterned scales.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_VENOM_ATTACK]
@@ -2208,7 +2352,7 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:rattlesnake man:rattlesnake men:rattlesnake man]
+	[NAME:rattlesnake naga:rattlesnake nagas:rattlesnake naga]{:rattlesnake man:rattlesnake men:rattlesnake man}
 	[DESCRIPTION:A person resembling a large rattlesnake with arms.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -2238,12 +2382,18 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, long, patterned snake with a tell-tale rattle that warns of her deadly, venomous bite.  Shy despite her size, she bites only when provoked.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, long, patterned snake with a tell-tale rattle that warns of his deadly, venomous bite.  Shy despite his size, he bites only when provoked.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:3561]
 	[GO_TO_START]
 	[NAME:giant rattlesnake:giant rattlesnakes:giant rattlesnake]
 	[CASTE_NAME:giant rattlesnake:giant rattlesnakes:giant rattlesnake]
+	[GENERAL_CHILD_NAME:giant rattlesnake snakelet:giant rattlesnake snakelet]{+}
 	[DESCRIPTION:A huge monster taking the shape of a rattlesnake.]
 	[POPULATION_NUMBER:10:25]
 	[CLUSTER_NUMBER:1:1]
@@ -2252,6 +2402,7 @@ Rattlesnakes were sponsored by the generous contributions of the Bay 12 communit
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:warning rattle]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:3512:2634:1756:878:4900:6900] 10 kph
@@ -2270,8 +2421,11 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 	[CREATURE_TILE:'w'][COLOR:6:0:0]
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:10]
+	[CURIOUSBEAST_ITEM]{+   Revision: sneaky thieves.}
+	[CURIOUSBEAST_EATER]{+  Revision: sneaky food thieves.}
 	[PET_EXOTIC]
 	[NATURAL]
+	[HUNTS_VERMIN]{+  Revision: weasels hunt small animals.}
 	[BIOME:NOT_FREEZING]
 	[BIOME:TUNDRA]
 	[LARGE_ROAMING]
@@ -2283,7 +2437,7 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:5TOES_FQ_REG:5TOES_RQ_REG:MOUTH:GENERIC_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:200]
@@ -2342,13 +2496,15 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, bloodthirsty mammal with a long, slender body, a fluffy tail, and short legs.  She has a long, flexible neck and small, round ears.  She hunts in mouse holes as well as barn yards.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, bloodthirsty mammal with a long, slender body, a fluffy tail, and short legs.  He has a long, flexible neck and small, round ears.  He hunts in mouse holes as well as barn yards.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2359,16 +2515,19 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 [CREATURE:WEASEL_MAN]
 	[COPY_TAGS_FROM:WEASEL]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:weasel man:weasel men:weasel man]
+		[DESCRIPTION:A small, furry man with short, round ears, a slender, flexible neck, and legs that seem small compared to his elongated body.  His fluffy tail swishes and flicks about when it's not wrapped about his waist.  He likes being naked; he's comfy in his warm fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:weasel woman:weasel women:weasel woman]
+		[DESCRIPTION:A small, furry woman with short, round ears, a slender, flexible neck, and legs that seem small compared to her elongated body.  Her fluffy tail swishes and flicks about when it's not wrapped about her waist.  She likes being naked; she's comfy in her warm fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2386,10 +2545,16 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_WEASEL]
 	[COPY_TAGS_FROM:WEASEL]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:RENAME_LEATHER_TO:FUR]{+  Revision: the leather is still furry after tanning.}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, slender mammal with short legs, a long, flexible neck, and short, round ears.  Her appetite matches her size, driving her to kill what she can and stash the leftovers in caches.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, slender mammal with short legs, a long, flexible neck, and short, round ears.  His appetite matches his size, driving him to kill what he can and stash the leftovers in caches.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:100700]
 	[GO_TO_START]
@@ -2404,6 +2569,8 @@ Weasels were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:9]{+  Revision: let them live long enough to be worth taming.}
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:long bodies]
 	[PREFSTRING:short legs]
@@ -2419,9 +2586,11 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 	[DESCRIPTION:A tiny venomous snake found in the woods and swamps.]
 	[NAME:copperhead snake:copperhead snakes:copperhead snake]
 	[CASTE_NAME:copperhead snake:copperhead snakes:copperhead snake]
+	[CHILD:2][GENERAL_CHILD_NAME:copperhead snakelet:copperhead snakelets]{+  Revision: taming requires a child tag (bug 7983).}
 	[CREATURE_TILE:'s'][COLOR:6:0:0]
 	[CREATURE_CLASS:POISONOUS]
 	[PETVALUE:50]
+	[GOBBLE_VERMIN_CLASS:MAMMAL]{+  Revision: too few creatures ate vermin.}
 	[PET_EXOTIC]
 	[FREQUENCY:30]
 	[NATURAL]
@@ -2501,12 +2670,17 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 	[CANNOT_JUMP]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A tiny, camouflaged, venomous snake found in the woods and swamps.  Her scales are patterned except for her copper-red head.  She has a painful bite and is more aggressive than most snakes.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A tiny, camouflaged, venomous snake found in the woods and swamps.  His scales are patterned except for his copper-red head.  He has a painful bite and is more aggressive than most snakes.]{+}
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SCALE]
-			[TL_COLOR_MODIFIER:COPPER:1] copper stripes
+			[TL_COLOR_MODIFIER:STRIPES_BRONZE_DARK_BROWN:1]{:COPPER:1}
 				[TLCM_NOUN:scales:PLURAL]
+		[SET_TL_GROUP:BY_CATEGORY:HEAD:SCALE]{+  Revision: this is more accurate.}
+			[TL_COLOR_MODIFIER:COPPER:1]
+				[TLCM_NOUN:head:SINGULAR]
 		[SET_TL_GROUP:BY_CATEGORY:EYE:EYE]
 			[TL_COLOR_MODIFIER:BLACK:1]
 				[TLCM_NOUN:eyes:PLURAL]
@@ -2533,11 +2707,20 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 		[CVCT_REPLACEMENT:COPPERHEAD_SNAKE_MAN]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[APPLY_CREATURE_VARIATION:ANIMAL_PERSON_LEGLESS]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
+	[GO_TO_TAG:TL_COLOR_MODIFIER:COPPER:1]{+           Revision: additional flavor for copperhead snake people.}
+		[CV_REMOVE_TAG:TL_COLOR_MODIFIER:COPPER:1]
+		[CV_REMOVE_TAG:TLCM_NOUN:head:SINGULAR]
+		[APPLY_CURRENT_CREATURE_VARIATION]
+		[PLUS_TL_GROUP:BY_CATEGORY:HAND:SCALE]
+		[TLCM_NOUN:head and hands:PLURAL]
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
-		[CASTE_NAME:copperhead snake man:copperhead snake men:copperhead snake man]
+		[CASTE_NAME:copperhead naga:copperhead nagas:copperhead naga]{:copperhead snake man:copperhead snake men:copperhead snake man}
+		[DESCRIPTION:A small, scaly man with the head of a copperhead on a tall neck.  The copper on his head almost resembles a mask, just as the copper on hands almost resembles gauntlets.  His bite is venomous and painful.  His thighs merge into a tail; he coils or draws himself up as needed.  He likes being naked; he sunbathes in just his patterned scales.]{+}
 	[SELECT_CASTE:FEMALE]
-		[CASTE_NAME:copperhead snake woman:copperhead snake women:copperhead snake woman]
+		[CASTE_NAME:copperhead nagi:copperhead nagis:copperhead nagi]{:copperhead snake woman:copperhead snake women:copperhead snake woman}
+		[DESCRIPTION:A small, scaly woman with the head of a copperhead on a tall neck.  The copper on her head almost resembles a mask, just as the copper on hands almost resembles gauntlets.  Her bite is venomous and painful.  Her thighs merge into a tail; she coils and draws herself up as needed.  She likes being naked; she sunbathes in just her patterned scales.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_VENOM_ATTACK]
@@ -2546,7 +2729,7 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CRAWLING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[GO_TO_START]
-	[NAME:copperhead snake man:copperhead snake men:copperhead snake man]
+	[NAME:copperhead naga:copperhead nagas:copperhead naga]{:copperhead snake man:copperhead snake men:copperhead snake man}
 	[DESCRIPTION:A large copperhead snake with the arms of a man.]
 	[POPULATION_NUMBER:5:10]
 	[CLUSTER_NUMBER:1:3]
@@ -2576,12 +2759,18 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
+	[APPLY_CREATURE_VARIATION:SCALES_YIELD_LEATHER]{+  Revision: scaly leather? Why not?}
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, long, aggressive snake with patterned, camouflaged scales and a copper-red head.  Her painful bite injects sickening venom, weaking her prey while she waits.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, long, aggressive snake with patterned, camouflaged scales and a copper-red head.  His painful bite injects sickening venom, weaking his prey while he waits.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:40700]
 	[GO_TO_START]
 	[NAME:giant copperhead snake:giant copperhead snakes:giant copperhead snake]
 	[CASTE_NAME:giant copperhead snake:giant copperhead snakes:giant copperhead snake]
+	[GENERAL_CHILD_NAME:giant copperhead snakelet:giant copperhead snakelets]{+}
 	[DESCRIPTION:A huge monster in the form of a copperhead snake.]
 	[POPULATION_NUMBER:10:25]
 	[CLUSTER_NUMBER:1:1]
@@ -2590,6 +2779,7 @@ Copperhead snakes were sponsored by the generous contributions of the Bay 12 com
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[LARGE_PREDATOR]{+  Revision: best be cautious.}
 	[GO_TO_END]
 	[PREFSTRING:attractive scale patterns]
 	[APPLY_CREATURE_VARIATION:STANDARD_WALK_CRAWL_GAITS:3512:2634:1756:878:4900:6900] 10 kph
@@ -2679,6 +2869,8 @@ Ibexes were sponsored by the generous contributions of the Bay 12 community.
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 		[ATTACK_PRIORITY:SECOND]
 		[ATTACK_FLAG_CANLATCH]
+	[APPLY_CREATURE_VARIATION:HORN_GORE_ATTACK]{+  Revision: ibexes have horns, why not use them?}
+	[APPLY_CREATURE_VARIATION:HORN_BUTT_ATTACK]{+  Revision: ibexes have horns, why not use them?}
 	[CHILD:1]
 	[DIURNAL]
 	[HOMEOTHERM:10067]
@@ -2689,14 +2881,16 @@ Ibexes were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, hooved mammal with long, curved horns.  She nimbly leaps from rock to rock in the mountains, foraging for tasty plants.]{+}
 		[MULTIPLE_LITTER_RARE]
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, hooved mammal with long, curved horns.  He nimbly leaps from rock to rock in the mountains, foraging for tasty plants.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2710,12 +2904,16 @@ Ibexes were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:ibex man:ibex men:ibex man]
+		[DESCRIPTION:A short, furry man with a pointy snout, tall ears that flick with his mood, slender, hooved legs, and a stubby tail that hardly covers his bum.  His enormous horns curve down past his shoulders.  He likes being naked; he's comfy in his woolly fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:ibex woman:ibex women:ibex woman]
+		[DESCRIPTION:A short, furry woman with a pointy snout, tall ears that flick with her mood, slender, hooved legs, and a stubby tail that hardly covers her bum.  Her enormous horns curve down past her shoulders.  She likes being naked; she's comfy in her woolly fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:HOOF_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK  Revision: biting's a daft idea.}
+	[APPLY_CREATURE_VARIATION:HORN_GORE_SECONDARY_ATTACK]{+  Revision: so ibex people get into a fight and never used their horns until now.}
+	[APPLY_CREATURE_VARIATION:HORN_BUTT_SECONDARY_ATTACK]{+  Revision: not your proudest moment, folks.}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2735,6 +2933,10 @@ Ibexes were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, hooved beast with menacing curved horns of great length.  Nimble despite her size, she jumps and climbs from rock to rock in the mountains.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, hooved beast with menacing curved horns of great length.  Nimble despite his size, he jumps and climbs from rock to rock in the mountains.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1120]
 	[GO_TO_START]
@@ -2841,13 +3043,15 @@ Wombats were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized, stocky marsupial with a stubby tail and small ears.  She digs extensive burrows with large claws and sharp teeth, tunneling exits and living space.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized, stocky marsupial with a stubby tail and small ears.  He digs extensive burrows with large claws and sharp teeth, tunneling exits and living space.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:BROWN:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -2861,13 +3065,15 @@ Wombats were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:wombat man:wombat men:wombat man]
+		[DESCRIPTION:A small, furry man with small ears, large teeth, a stocky body, stubby limbs, and a short tail that hardly covers his bum.  His puffy neck fur almost resembles a scarf.  He likes being naked; he's comfy in his soft fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:wombat woman:wombat women:wombat woman]
+		[DESCRIPTION:A small, furry woman with small ears, large teeth, a stocky body, stubby limbs, and a short tail that hardly covers her bum.  Her puffy neck fur almost resembles a scarf.  She has a pouch on her stomach for carrying a little one.  She likes being naked; she's comfy in her soft fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -2889,6 +3095,10 @@ Wombats were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, stocky marsupial with a stubby tail and small ears.  She digs with large claws and teeth, tunneling extensive burrows with many entrances.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, stocky marsupial with a stubby tail and small ears.  He digs with large claws and teeth, tunneling extensive burrows with many entrances.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1511]
 	[GO_TO_START]
@@ -2915,8 +3125,8 @@ Dingoes were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:DINGO]
 	[DESCRIPTION:A small dog-like creature.  They are known to attack livestock.]
-	[NAME:dingo:dingoes:dingo]
-	[CASTE_NAME:dingo:dingoes:dingo]
+	[NAME:dingo:dingos:dingo]{:dingoes:}
+	[CASTE_NAME:dingo:dingos:dingo]{:dingoes:}
 	[CHILD:1][GENERAL_CHILD_NAME:dingo pup:dingo pups]
 	[CREATURE_TILE:'d'][COLOR:6:0:1]
 	[CREATURE_CLASS:MAMMAL]
@@ -2991,13 +3201,15 @@ Dingoes were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A midsized wild dog that sometimes attacks livestock, often in groups.  Noisy and opportunistic, she roams great distances looking for her next meal.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A midsized wild dog that sometimes attacks livestock, often in groups.  Noisy and opportunistic, he roams great distances looking for his next meal.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:TAUPE_SANDY:1:TAN:1:CHESTNUT:1:BLACK:1:LIGHT_BROWN:1:WHITE:1:DARK_TAN:1:CINNAMON:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -3013,12 +3225,14 @@ Dingoes were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:dingo man:dingo men:dingo man]
+		[DESCRIPTION:A small, furry man with tall, triangular ears and a shaggy tail that wags with his mood.  He has a toothy, overly wide smile that often gives the impression he's about to go for someone's neck.  He likes being naked; he's comfy in his soft fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:dingo woman:dingo women:dingo woman]
+		[DESCRIPTION:A small, furry woman with tall, triangular ears and a shaggy tail that wags with her mood.  She has a toothy, overly wide smile that often gives the impression she's about to go for someone's neck.  She likes being naked; she's comfy in her soft fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: scratching's a daft idea.}
 	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3041,11 +3255,15 @@ Dingoes were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, wild, noisy dog.  Ill-favored, she steals food and attacks both livestock and the unwary.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, wild, noisy dog.  Ill-favored, he steals food and attacks both livestock and the unwary.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:1709]
 	[GO_TO_START]
-	[NAME:giant dingo:giant dingoes:giant dingo]
-	[CASTE_NAME:giant dingo:giant dingoes:giant dingo]
+	[NAME:giant dingo:giant dingos:giant dingo]{:giant dingoes:}
+	[CASTE_NAME:giant dingo:giant dingos:giant dingo]{:giant dingoes:}
 	[GENERAL_CHILD_NAME:giant dingo pup:giant dingo pups]
 	[DESCRIPTION:A huge monster in the form of a dingo.]
 	[POPULATION_NUMBER:10:20]
@@ -3055,6 +3273,7 @@ Dingoes were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[TRAINABLE]{+  Revision: now they're trainable for war and hunting.}
 	[GO_TO_END]
 	[PREFSTRING:coloration]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:900:549:366:183:1900:2900] 48 kph
@@ -3085,7 +3304,7 @@ Coatis were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:RODENT_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:100]
@@ -3144,13 +3363,15 @@ Coatis were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, raccoon-like mammal with a slender snout and a fluffy tail.  She sleeps in the trees and travels with her kin as a noisy, riotous pack.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, raccoon-like mammal with a slender snout and a fluffy tail.  He sleeps in the trees and travels with his kin as a noisy, riotous pack.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:CHESTNUT:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -3164,13 +3385,15 @@ Coatis were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:coati man:coati men:coati man]
+		[DESCRIPTION:A small, furry man with a slender, pig-like snout, small ears, large teeth, and a fluffy tail that swishes as he moves.  His long, lanky body makes him look taller than he is.  He likes being naked; he's comfy in his short fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:coati woman:coati women:coati woman]
+		[DESCRIPTION:A small, furry woman with a slender, pig-like snout, small ears, large teeth, and a fluffy tail that swishes as she moves.  Her long, lanky body makes her look taller than she is.  She likes being naked; she's comfy in her short fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3192,6 +3415,10 @@ Coatis were sponsored by the generous contributions of the Bay 12 community.
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, raccoon-like beast with small ears, a slender snout, and a fluffy tail.  Curious and persistent, she steals whatever she can carry.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, raccoon-like beast with small ears, a slender snout, and a fluffy tail.  Curious and persistent, he steals whatever he can carry.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:4036]
 	[GO_TO_START]
@@ -3225,6 +3452,7 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 	[CREATURE_CLASS:MAMMAL]
 	[PETVALUE:10]
 	[PET_EXOTIC]
+	[HUNTS_VERMIN]{+  Revision: opossums like eating tiny things.}
 	[NATURAL]
 	[BIOME:ANY_TEMPERATE_FOREST]
 	[BIOME:SHRUBLAND_TEMPERATE]
@@ -3238,7 +3466,7 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 	[BODY:QUADRUPED_NECK:TAIL:2EYES:2EARS:NOSE:2LUNGS:HEART:GUTS:ORGANS:THROAT:NECK:SPINE:BRAIN:SKULL:4TOES_FQ_REG:5TOES_RQ_REG:MOUTH:GENERIC_TEETH:RIBCAGE]
 	[BODYGLOSS:PAW]
 	[GRASSTRAMPLE:0]
-	[BODY_DETAIL_PLAN:STANDARD_MATERIALS]
+	[BODY_DETAIL_PLAN:STANDARD_SMALL_MATERIALS]{:STANDARD_MATERIALS  Revision: too small to yield leather.}
 	[BODY_DETAIL_PLAN:STANDARD_TISSUES]
 		[SELECT_TISSUE:HAIR]
 			[INSULATION:200]
@@ -3297,13 +3525,15 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 	[MUNDANE]
 	[CASTE:FEMALE]
 		[FEMALE]
+		[DESCRIPTION:A small, hardy, rat-like marsupial with a long snout and a gripping tail.  Sometimes she plays dead to confuse attackers, feigning the smell and appearance of death.]{+}
 	[CASTE:MALE]
 		[MALE]
+		[DESCRIPTION:A small, hardy, rat-like marsupial with a long snout and a gripping tail.  Sometimes he plays dead to confuse attackers, feigning the smell and appearance of death.]{+}
 		[SET_BP_GROUP:BY_TYPE:LOWERBODY][BP_ADD_TYPE:GELDABLE]
 	[SELECT_CASTE:ALL]
 		[SET_TL_GROUP:BY_CATEGORY:ALL:HAIR]
 			[TL_COLOR_MODIFIER:GRAY:1]
-				[TLCM_NOUN:hair:SINGULAR]
+				[TLCM_NOUN:fur:SINGULAR]{:hair:SINGULAR}
 		[SET_TL_GROUP:BY_CATEGORY:ALL:SKIN]
 	[TL_COLOR_MODIFIER:BROWN:1:BURNT_UMBER:1:CINNAMON:1:COPPER:1:DARK_BROWN:1:DARK_PEACH:1:DARK_TAN:1:ECRU:1:PALE_BROWN:1:PALE_CHESTNUT:1:PALE_PINK:1:PEACH:1:PINK:1:RAW_UMBER:1:SEPIA:1:TAN:1:TAUPE_PALE:1:TAUPE_SANDY:1]
 				[TLCM_NOUN:skin:SINGULAR]
@@ -3317,13 +3547,15 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 	[GO_TO_END]
 	[SELECT_CASTE:MALE]
 		[CASTE_NAME:opossum man:opossum men:opossum man]
+		[DESCRIPTION:A small, furry man with the large ears and head of an opossum.  His fluffy tail swishes as he moves.  His slender snout hides a surprisingly big bite.  He likes being naked; he's comfy in his shaggy fur.]{+}
 	[SELECT_CASTE:FEMALE]
 		[CASTE_NAME:opossum woman:opossum women:opossum woman]
+		[DESCRIPTION:A small, furry woman with the large ears and head of an opossum.  Her fluffy tail swishes as she moves.  Her slender snout hides a surprisingly big bite.  She likes being naked; she's comfy in her shaggy fur.]{+}
 	[SELECT_CASTE:ALL]
 	[APPLY_CREATURE_VARIATION:PUNCH_ATTACK]
 	[APPLY_CREATURE_VARIATION:KICK_ATTACK]
-	[APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK]
-	[APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK]
+	{APPLY_CREATURE_VARIATION:NAIL_SCRATCH_ATTACK  Revision: biting and scratching are daft ideas; remove them.}
+	{APPLY_CREATURE_VARIATION:TOOTH_BITE_ATTACK}
 	[APPLY_CREATURE_VARIATION:STANDARD_BIPED_GAITS:900:711:521:293:1900:2900] 30 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_CLIMBING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
 	[APPLY_CREATURE_VARIATION:STANDARD_SWIMMING_GAITS:2990:2257:1525:731:4300:6100] 12 kph
@@ -3341,10 +3573,15 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 
 [CREATURE:GIANT_OPOSSUM]
 	[COPY_TAGS_FROM:OPOSSUM]
+	[CV_REMOVE_TAG:MAXAGE]{+  Revision: remove the MAXAGE tag before adding a new one, to avoid bug #6393.}
 	[APPLY_CREATURE_VARIATION:GIANT]
 	[CV_REMOVE_TAG:CHANGE_BODY_SIZE_PERC]
 	[APPLY_CURRENT_CREATURE_VARIATION]
 	[GO_TO_END]
+	[SELECT_CASTE:FEMALE]
+		[DESCRIPTION:A large, hardy, rat-like marsupial with a long snout and a gripping tail.  She isn't a picky eater and will get into almost anything.]{+}
+	[SELECT_CASTE:MALE]
+		[DESCRIPTION:A large, hardy, rat-like marsupial with a long snout and a gripping tail.  He isn't a picky eater and will get into almost anything.]{+}
 	[SELECT_CASTE:ALL]
 	[CHANGE_BODY_SIZE_PERC:7368]
 	[GO_TO_START]
@@ -3359,6 +3596,7 @@ Opossums were sponsored by the generous contributions of the Bay 12 community.
 	[PET_EXOTIC]
 	[PETVALUE:500]
 	[MOUNT_EXOTIC]
+	[MAXAGE:6:8]{+  Revision: let them live long enough to be worth taming.}
 	[GO_TO_END]
 	[PREFSTRING:ability to play dead]
 	[APPLY_CREATURE_VARIATION:STANDARD_QUADRUPED_GAITS:2206:1692:1178:585:3400:4900] 15 kph

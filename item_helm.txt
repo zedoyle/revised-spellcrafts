@@ -4,28 +4,28 @@ item_helm
 
 [ITEM_HELM:ITEM_HELM_HELM]
 [NAME:helm:helms]
-[ARMORLEVEL:1]
-[METAL_ARMOR_LEVELS]
+[ARMORLEVEL:3]{:1       Revision: helms are considered plate, not leather.}
+{METAL_ARMOR_LEVELS     Revision: this tag isn't necessary, now that helms are plate.}
 [SHAPED]
 [LAYER:ARMOR]
-[COVERAGE:100]
+[COVERAGE:85]{:100      Revision: reduce the armor coverage.}
 [LAYER_SIZE:30]
 [LAYER_PERMIT:20]
-[MATERIAL_SIZE:2]
+[MATERIAL_SIZE:12]{:2   Revision: balanced the required materials to make them.}
 [HARD]
 [METAL]
-[BARRED]
-[SCALED]
-[LEATHER]
+{BARRED                 Revision: helms are plate, not bone.}
+{SCALED                 Revision: helms are plate, not shell.}
+{LEATHER                Revision: helms are plate, not leather.}
 
 [ITEM_HELM:ITEM_HELM_CAP]
 [NAME:cap:caps]
 [METAL_ARMOR_LEVELS]
 [LAYER:OVER]
-[COVERAGE:50]
+[COVERAGE:60]{:50       Revision: increase the armor coverage.}
 [LAYER_SIZE:10]
 [LAYER_PERMIT:15]
-[MATERIAL_SIZE:1]
+[MATERIAL_SIZE:6]{:1    Revision: balanced the required materials to make them.}
 [SOFT]
 [LEATHER]
 [HARD]
@@ -36,7 +36,7 @@ item_helm
 [ITEM_HELM:ITEM_HELM_HOOD]
 [NAME:hood:hoods]
 [LAYER:COVER]
-[COVERAGE:100]
+[COVERAGE:80]{:100      Revision: reduce the armor coverage.}
 [LAYER_SIZE:10]
 [LAYER_PERMIT:100]
 [MATERIAL_SIZE:2]
@@ -46,7 +46,7 @@ item_helm
 
 [ITEM_HELM:ITEM_HELM_TURBAN]
 [NAME:turban:turbans]
-[LAYER:OVER]
+[LAYER:COVER]{:OVER      Revision: wear it over armor.}
 [COVERAGE:50]
 [LAYER_SIZE:20]
 [LAYER_PERMIT:100]
@@ -58,7 +58,7 @@ item_helm
 [ITEM_HELM:ITEM_HELM_MASK]
 [NAME:mask:masks]
 [LAYER:UNDER]
-[COVERAGE:50]
+[COVERAGE:20]{:50        Revision: reduce the armor coverage.}
 [LAYER_SIZE:20]
 [LAYER_PERMIT:10]
 [MATERIAL_SIZE:2]
@@ -69,12 +69,12 @@ item_helm
 [BARRED]
 [SCALED]
 [STRUCTURAL_ELASTICITY_WOVEN_THREAD]
-[SHAPED]
+{SHAPED                  Revision: removed shaped.  We don't want NPCs to wear masks instead of helms.}
 
 [ITEM_HELM:ITEM_HELM_VEIL_HEAD]
 [NAME:head veil:head veils]
-[LAYER:OVER]
-[COVERAGE:50]
+[LAYER:COVER]{:OVER      Revision: wear it over armor.}
+[COVERAGE:80]{:50        Revision: increase the armor coverage.}
 [LAYER_SIZE:10]
 [LAYER_PERMIT:100]
 [MATERIAL_SIZE:2]
@@ -85,7 +85,7 @@ item_helm
 [ITEM_HELM:ITEM_HELM_VEIL_FACE]
 [NAME:face veil:face veils]
 [LAYER:UNDER]
-[COVERAGE:50]
+[COVERAGE:25]{:50         Revision: reduce the armor coverage.}
 [LAYER_SIZE:10]
 [LAYER_PERMIT:100]
 [MATERIAL_SIZE:2]
@@ -95,9 +95,9 @@ item_helm
 
 [ITEM_HELM:ITEM_HELM_SCARF_HEAD]
 [NAME:headscarf:headscarves]
-[LAYER:OVER]
+[LAYER:COVER]{:OVER      Revision: wear it over armor.}
 [COVERAGE:50]
-[LAYER_SIZE:10]
+[LAYER_SIZE:5]{:10       Revision: balance armor layering.}
 [LAYER_PERMIT:100]
 [MATERIAL_SIZE:2]
 [SOFT]

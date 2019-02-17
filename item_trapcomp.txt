@@ -5,54 +5,73 @@ item_trapcomp
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_GIANTAXEBLADE]
 [NAME:axe blade:axe blades]
 [ADJECTIVE:giant]
-[SIZE:1600]
-[HITS:1]
-[MATERIAL_SIZE:5]
+[SIZE:800]{:1600       Revision: balanced weapon sizes.}
+[HITS:2]{:1            Revision: balanced with the weapon attacks.}
+[MATERIAL_SIZE:18]{:5  Revision: balanced the required materials to make them.}
 [METAL]
-[ATTACK:EDGE:100000:10000:slash:slashes:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:60000:3000:slash:slashes:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:1]
+[ATTACK:EDGE:100:1000:thrust:thrusts:flank:1000]
+	[ATTACK_PREPARE_AND_RECOVER:7:9]
 
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_ENORMOUSCORKSCREW]
 [NAME:corkscrew:corkscrews]
 [ADJECTIVE:enormous]
-[SIZE:1600]
+[SIZE:800]{:1600  Revision: balanced weapon sizes.}
 [HITS:1]
-[MATERIAL_SIZE:5]
+[MATERIAL_SIZE:15]{:5  Revision: balanced the required materials to make them.}
 [IS_SCREW]
 [WOOD]
 [METAL]
-[ATTACK:EDGE:100:10000:drill:drills:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:100:11000:drill:drills:NO_SUB:2000]
+	[ATTACK_PREPARE_AND_RECOVER:12:9]
+[ATTACK:EDGE:100:20:cut:cuts:NO_SUB:100]
+	[ATTACK_PREPARE_AND_RECOVER:12:9]
 
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_SPIKEDBALL]
 [NAME:ball:balls]
 [ADJECTIVE:spiked]
-[SIZE:1000]
-[HITS:3]
-[MATERIAL_SIZE:4]
-[WOOD]
+[SIZE:460]{:1000      Revision: balanced weapon sizes.}
+[HITS:1]{:3           Revision: balanced with the weapon attacks.}
+[MATERIAL_SIZE:9]{:4  Revision: balanced the required materials to make them.}
+{WOOD  Revision: this didn't make any sense.}
 [METAL]
-[ATTACK:EDGE:10:200:strike:strikes:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:10:160:hit:hits:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:8:16]
+[ATTACK:EDGE:40000:5:loosely hit:loosely hits:NO_SUB:100]
+	[ATTACK_PREPARE_AND_RECOVER:8:16]
+[ATTACK:EDGE:100:1:bash:bashes:multiple spikes:1000]
+	[ATTACK_PREPARE_AND_RECOVER:8:16]
 
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_LARGESERRATEDDISC]
 [NAME:disc:discs]
 [ADJECTIVE:large, serrated]
-[SIZE:1000]
-[HITS:3]
-[MATERIAL_SIZE:4]
+[SIZE:200]{:1000       Revision: balanced weapon sizes.}
+[HITS:2]{:3            Revision: balanced with the weapon attacks.}
+[MATERIAL_SIZE:18]{:4  Revision: balanced the required materials to make them.}
 [METAL]
-[ATTACK:EDGE:100000:10000:saw:saws:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:100000:4000:saw:saws:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:12:1]
+[ATTACK:EDGE:100000:50:cut:cuts:NO_SUB:1000]
+	[ATTACK_PREPARE_AND_RECOVER:12:1]
 
 [ITEM_TRAPCOMP:ITEM_TRAPCOMP_MENACINGSPIKE]
 [NAME:spike:spikes]
 [ADJECTIVE:menacing]
-[SIZE:1600]
+[SIZE:800]{:1600  Revision: balanced weapon sizes.}
 [HITS:1]
-[MATERIAL_SIZE:5]
+[MATERIAL_SIZE:9]{:5  Revision: balanced the required materials to make them.}
 [IS_SPIKE]
 [WOOD]
 [METAL]
-[ATTACK:EDGE:10:6000:stab:stabs:NO_SUB:1000]
-	[ATTACK_PREPARE_AND_RECOVER:4:4]
+{?  Revision: weapon attacks have changed too much for sane commentary.}
+[ATTACK:EDGE:17:8500:stab:stabs:NO_SUB:200]
+	[ATTACK_PREPARE_AND_RECOVER:3:9]
+[ATTACK:EDGE:17:11000:thrust:thrusts:NO_SUB:400]
+	[ATTACK_PREPARE_AND_RECOVER:3:13]
+[ATTACK:EDGE:8500:20:cut:cuts:NO_SUB:50]
+	[ATTACK_PREPARE_AND_RECOVER:3:9]
