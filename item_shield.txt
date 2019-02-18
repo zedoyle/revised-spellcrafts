@@ -5,13 +5,13 @@ item_shield
 [ITEM_SHIELD:ITEM_SHIELD_SHIELD]
 [NAME:shield:shields]
 [ARMORLEVEL:2]
-[BLOCKCHANCE:20]
+[BLOCKCHANCE:25]{:20  Revision: increase the block chance.}
 [UPSTEP:2]
-[MATERIAL_SIZE:4]
+[MATERIAL_SIZE:6]{:4  Revision: balanced the required materials to make them.}
 
 [ITEM_SHIELD:ITEM_SHIELD_BUCKLER]
 [NAME:buckler:bucklers]
 [ARMORLEVEL:1]
-[BLOCKCHANCE:10]
+[BLOCKCHANCE:20]{:10  Revision: increase the block chance.}
 [UPSTEP:1]
-[MATERIAL_SIZE:2]
+[MATERIAL_SIZE:3]{:2  Revision: balanced the required materials to make them.}
